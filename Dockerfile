@@ -3,24 +3,48 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get install -y apt-utils
-RUN apt-get -y install apt-utils git curl radare2 python2 python3 python3-venv python3-pip wget sudo docker telnet net-tools iputils-ping iptables iproute2 libguestfs-tools p7zip-full p7zip-rar zip libpq-dev vim netcat socat qemu-system
+RUN apt-get -y install apt-utils git curl radare2 python2 python3 python3-venv python3-pip wget sudo docker telnet net-tools iputils-ping iptables iproute2 libguestfs-tools p7zip-full p7zip-rar zip libpq-dev vim netcat socat qemu-system \
+        build-essential libffi-dev libssl-dev pkg-config \
+        libxml2-dev libxslt1-dev libreadline-dev liblzma-dev \
+        libbz2-dev libsqlite3-dev zlib1g-dev libncurses5-dev \
+        cmake libtool nasm binutils-multiarch
 RUN apt update
 RUN apt install -y dnsutils jq
 
-RUN python3 -m venv /root/venv
+# Build Python 3.12 from source (required for angr)
+RUN wget -q https://www.python.org/ftp/python/3.12.9/Python-3.12.9.tgz && \
+    tar -xzf Python-3.12.9.tgz && \
+    cd Python-3.12.9 && \
+    ./configure --with-ensurepip=install && \
+    make -j$(nproc) && \
+    make altinstall && \
+    cd .. && rm -rf Python-3.12.9 Python-3.12.9.tgz
+
+# Install Rust (required by some angr dependencies)
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:$PATH"
+
+RUN python3.12 -m venv /root/venv && \
+    /root/venv/bin/pip install --upgrade pip wheel setuptools
 
 RUN mkdir -p /work/firmwares
 RUN cd /work && git clone -q --recursive https://github.com/pr0v3rbs/FirmAE
 
 COPY FirmAEreplacements/install.sh /work/FirmAE/install.sh
 COPY FirmAEreplacements/v2.3.3.tar.gz /work/FirmAE/v2.3.3.tar.gz
-
 RUN cd /work/FirmAE && ./download.sh
+RUN cd /work/FirmAE && tar -xf v2.3.3.tar.gz && \
+    cd binwalk-2.3.3 && python3 setup.py install
 RUN cd /work/FirmAE && ./install.sh
 RUN ln -s /bin/ntfs-3g /bin/mount.ntfs-3g
 
-RUN git clone -q https://github.com/angr/angr-dev
-RUN cd /angr-dev && . /root/venv/bin/activate && ./setup.sh -i -D "archinfo pyvex cle claripy ailment angr angr-doc binaries"
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get install -y python3-dev debootstrap debian-archive-keyring libglib2.0-dev libpixman-1-dev qtdeclarative5-dev
+
+COPY angr-dev /angr-dev
+RUN cd /angr-dev && . /root/venv/bin/activate && REPOS_CPYTHON="" ./setup.sh -D "archinfo pyvex cle claripy ailment angr"
+RUN /root/venv/bin/python -c "import angr; print('angr OK:', angr.__version__)"
 
 RUN git clone -q https://github.com/davidribyrne/cramfs
 RUN cd /cramfs && make && make install
