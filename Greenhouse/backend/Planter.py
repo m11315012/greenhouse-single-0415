@@ -114,6 +114,7 @@ class Fixer():
         if not self.baseline_mode:
             self.setup_custom_libraries(fs_path)
         self.propgate_contents(fs_path)
+        self.patch_alphanetworks_httpd(fs_path)
 
         return True
 
@@ -162,6 +163,47 @@ class Fixer():
                 shutil.rmtree(dest)
             shutil.copytree(webroot_path, dest, symlinks=True)
             print("Created", dest)
+
+    def patch_alphanetworks_httpd(self, fs_path):
+        # Detect alphanetworks/mathopd-based httpd (used in D-Link devices) and patch
+        # the session auth check guard: BLEZ $s0,+4 → B +4 (unconditional branch),
+        # so all requests bypass the session check and avoid 403 Forbidden.
+        # Signature: binary contains both b"parse_auth_key" and b"r->keep_key".
+        # Pattern: 1a 00 00 04  00 00 00 00  0c  (BLEZ +4, NOP, start of JAL opcode)
+        SIGS = [b"parse_auth_key", b"r->keep_key"]
+        PATTERN = bytes([0x1a, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x0c])
+        for root, dirs, files in os.walk(fs_path):
+            for fname in files:
+                fpath = os.path.join(root, fname)
+                if not os.path.isfile(fpath) or os.path.islink(fpath):
+                    continue
+                try:
+                    with open(fpath, 'rb') as f:
+                        data = bytearray(f.read())
+                except Exception:
+                    continue
+                if len(data) < 4 or data[:4] != b'\x7fELF':
+                    continue
+                if not all(sig in data for sig in SIGS):
+                    continue
+                print("    - [httpd_bypass] Detected alphanetworks httpd: %s" % fpath)
+                idx = 0
+                patched = False
+                while True:
+                    pos = bytes(data).find(PATTERN, idx)
+                    if pos == -1:
+                        break
+                    if pos % 4 == 0:
+                        data[pos] = 0x10  # BLEZ (0x1a) → B/BEQ $zero,$zero (0x10)
+                        print("    - [httpd_bypass] Patched BLEZ→B at offset 0x%x in %s" % (pos, fpath))
+                        patched = True
+                    idx = pos + 1
+                if patched:
+                    try:
+                        with open(fpath, 'wb') as f:
+                            f.write(data)
+                    except Exception as e:
+                        print("    - [httpd_bypass] ERROR writing patched binary: %s" % e)
 
     def find_library(self, libname, fs_path, resolve_symlinks=True, skip=[]):
         for root, dirs, files in os.walk(fs_path):

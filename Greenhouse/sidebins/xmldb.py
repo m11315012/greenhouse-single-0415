@@ -62,6 +62,7 @@ class XMLDBHandler(BackgroundScript):
                 defaultxmlpath = os.path.join(pluginDir, XMLDB_DUMP)
                 shutil.copyfile(defaultxmlpath, xmldumppath)
 
+            cmds.append("rm -f /var/run/xmldb_sock /var/run/xmldb_sock_*.pid")
             args = "%s -n %s -t &" % (xmldbPath, xmlnodename)
             cmds.append(args)
             args = "%s 3" % (sleepPath)
