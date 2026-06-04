@@ -9,7 +9,7 @@ class PrematureExit:
         self.old_node = None
         self.alt_node = None
 
-    def diagnose(self, binary, bintrunk, trace, trace_trunk_path, index, exit_code, timedout, errored, daemonized):
+    def diagnose(self, binary, bintrunk, trace, trace_trunk_path, index, exit_code, timedout, errored, daemonized, exit_hints=None):
         self.avoid_addr = -1
         self.parent = None
         self.old_node = None
