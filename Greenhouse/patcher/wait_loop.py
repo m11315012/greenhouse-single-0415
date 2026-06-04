@@ -16,12 +16,37 @@ class WaitLoop:
                     return i, j
         return -1, -1
 
-    def diagnose(self, binary, bintrunk, trace, trace_trunk_path, index, exit_code, timedout, errored, daemonized):
+    def diagnose(self, binary, bintrunk, trace, trace_trunk_path, index, exit_code, timedout, errored, daemonized, loop_hints=None):
         self.cycle_nodes = None
         self.parent = None
         self.old_node = None
         self.alt_node = None
         if timedout:
+            # 若有 ChkUp 靜態 hint，先嘗試 hint 地址附近的區域，避免 O(N²) 全掃
+            if loop_hints:
+                for hint in loop_hints:
+                    addr_str = hint.get("loop_head", "")
+                    if not addr_str:
+                        continue
+                    try:
+                        hint_addr = int(addr_str, 16)
+                    except ValueError:
+                        continue
+                    hint_nodes = bintrunk.find_nodes_near_addr(hint_addr)
+                    if hint_nodes:
+                        trimmed = bintrunk.trim_trace_near_nodes(trace_trunk_path, hint_nodes, window=200)
+                        cycle_nodes = bintrunk.get_nodes_in_cycle(trace_path=trimmed[::-1])
+                        if len(cycle_nodes) > 0:
+                            print("[ChkUp] WaitLoop found via hint @ %s" % addr_str)
+                            self.cycle_nodes = cycle_nodes
+                            self.parent, self.old_node, self.alt_node = bintrunk.find_cycle_exit(self.cycle_nodes)
+                            if self.parent and self.old_node and self.alt_node:
+                                print("Divergence Node: %s->%s should become %s->%s" % (
+                                    self.parent, self.old_node, self.parent, self.alt_node))
+                                return True
+                # hint 未命中，fallback 到原本邏輯
+                print("[ChkUp] WaitLoop hints did not match, falling back to full trace scan")
+
             # assuming we looped at least once
             # all addresses in the loop will be present in the trace
             # avoiding any one of them avoids the entire code block that is the loop

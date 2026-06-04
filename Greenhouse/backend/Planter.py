@@ -19,7 +19,7 @@ WEBROOTS = ["www", "www.eng" "web", "webs"]
 WEB_EXTS = ["html", "htm", "xhtm", "jhtm", "cgi", "xml", "js", "wss", "php", "php4", "php3", "phtml", \
             "rss", "svg", "dll", "asp", "aspx", "axd", "asx", "asmx", "ashx", "cfm", "swf"]
 BACKUP_TAGS = ["bak", "bak2", "bkup"]
-POTENTIAL_HTTPSERV = ["httpd", "uhttpd", "lighttpd", "jjhttpd", "shttpd", "thttpd","minihttpd", "mini_httpd", \
+POTENTIAL_HTTPSERV = ["anweb", "httpd", "uhttpd", "lighttpd", "jjhttpd", "shttpd", "thttpd","minihttpd", "mini_httpd", \
                     "mini_httpds", "dhttpd", "alphapd", "goahead", "boa", "appweb", "shgw_httpd", \
                     "tenda_httpd", "funjsq_httpd", "webs", "hunt_server", "hydra"]
 POTENTIAL_UPNPSERV = ["miniupnpd", "miniupnpc", "mini_upnpd", "miniupnpd_ap", "miniupnpd_wsc", \
@@ -563,6 +563,8 @@ class Planter():
         self.fixer = None
         self.brand = brand
         self.indicators = ["/bin/sh", "/bin/busybox"]
+        from .chkup_pre_analyzer import ChkUpPreAnalyzer
+        self.pre_analyzer = ChkUpPreAnalyzer()
 
     def identify_target_folder(self, extracted_path):
         found_fs = ""
@@ -677,7 +679,15 @@ class Planter():
         return False    
 
     def get_target_binary(self, fs_path, rehost_type):
-        potential_binaries = self.get_potential_binaries(rehost_type)
+        base_candidates = list(self.get_potential_binaries(rehost_type))
+
+        # prepend high-confidence ChkUp hints; append medium-confidence ones
+        chkup_high = [n for n, c in self.pre_analyzer.get_web_binary_candidates()
+                      if c == "high" and n not in base_candidates]
+        chkup_med  = [n for n, c in self.pre_analyzer.get_web_binary_candidates()
+                      if c != "high" and n not in base_candidates]
+        potential_binaries = chkup_high + base_candidates + chkup_med
+
         pot_targets = dict()
         for root, dirs, files in os.walk(fs_path, topdown=False):
             for name in files:
@@ -687,11 +697,12 @@ class Planter():
                     pot_targets[name.lower()].append(os.path.join(root, name))
 
         print("Potential Binaries: ", pot_targets)
-        # return "best" match in order listed in potential_binaries
+        # return "best" match in priority order
         for binary in potential_binaries:
             if binary in pot_targets.keys():
                 for bin_path in pot_targets[binary]:
-                    sp = subprocess.run(["file", bin_path], stdout=PIPE, stderr=PIPE)
+                    # follow symlinks so `file` sees the actual ELF, not "symbolic link to ..."
+                    sp = subprocess.run(["file", "-L", bin_path], stdout=PIPE, stderr=PIPE)
                     stdout = sp.stdout
                     details = stdout.split(b":")[1].strip()
                     if details.startswith(b"ELF "):
@@ -725,7 +736,9 @@ class Planter():
     def setup_env(self, qemu_src_path, fs_path, bin_path, baseline_mode):
         self.fixer = Fixer(qemu_src_path, self.gh_path, self.scripts_path, self.brand, baseline_mode)
         r = self.fixer.initial_setup(fs_path, bin_path)
-        return r 
+        if r:
+            self.pre_analyzer.inject_nvram(self.fixer)
+        return r
 
     def check_cwd(self, fs_path, targets, old_cwd, cwd_rh_replaced, already_success):
         if cwd_rh_replaced or already_success:

@@ -1,0 +1,4425 @@
+{
+  "firmware_id": "_DAP2310B-firmware-v210-rc036.bin.extracted",
+  "xmldb_node_paths": [
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/crypterr",
+      "suggested_value": "",
+      "source": "athstats@0x00406610"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/crcerr",
+      "suggested_value": "",
+      "source": "athstats@0x00406448"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/phyerr",
+      "suggested_value": "",
+      "source": "athstats@0x004066f4"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/micerr",
+      "suggested_value": "",
+      "source": "athstats@0x0040652c"
+    },
+    {
+      "node_path": "/captival/mtd/block_num",
+      "suggested_value": "",
+      "source": "captival_tar@0x004013d8"
+    },
+    {
+      "node_path": "/captival/mtd/tar/size",
+      "suggested_value": "",
+      "source": "captival_tar@0x00401428"
+    },
+    {
+      "node_path": "/captival/mtd/tar/remains",
+      "suggested_value": "",
+      "source": "captival_tar@0x0040172c"
+    },
+    {
+      "node_path": "/sys/swcontroller/enable",
+      "suggested_value": "",
+      "source": "captival_tar@0x00404ee4"
+    },
+    {
+      "node_path": "/captival/mtd/tar/offset",
+      "suggested_value": "",
+      "source": "captival_tar@0x00401400"
+    },
+    {
+      "node_path": "/captival/mtd/tar/index:%d",
+      "suggested_value": "",
+      "source": "captival_tar@0x004017d4"
+    },
+    {
+      "node_path": "/captival/mtd/tar/index:%d/name",
+      "suggested_value": "",
+      "source": "captival_tar@0x00401798"
+    },
+    {
+      "node_path": "/runtime/inf:%d/multi/index:%d/ssid",
+      "suggested_value": "",
+      "source": "charconv@0x004011fc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/ssid",
+      "suggested_value": "",
+      "source": "charconv@0x00401128"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/state",
+      "suggested_value": "",
+      "source": "charconv@0x00401158"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/ssid_charset",
+      "suggested_value": "",
+      "source": "charconv@0x00401178"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/ssid",
+      "suggested_value": "",
+      "source": "charconv@0x0040118c"
+    },
+    {
+      "node_path": "/runtime/inf:%d/ssid",
+      "suggested_value": "",
+      "source": "charconv@0x00401114"
+    },
+    {
+      "node_path": "/wlan/inf:%d/ssid_charset",
+      "suggested_value": "",
+      "source": "charconv@0x004010c0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo",
+      "suggested_value": "",
+      "source": "wlanconfig@0x004035fc"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%d/ssid",
+      "suggested_value": "",
+      "source": "wlanconfig@0x00403d54"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%d/chan",
+      "suggested_value": "",
+      "source": "wlanconfig@0x00403eec"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%d/mac",
+      "suggested_value": "",
+      "source": "wlanconfig@0x00403e20"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%d/auth",
+      "suggested_value": "",
+      "source": "wlanconfig@0x00403980"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%d/rssi",
+      "suggested_value": "",
+      "source": "wlanconfig@0x00403fc0"
+    },
+    {
+      "node_path": "/captival/mtd/html/size",
+      "suggested_value": "",
+      "source": "rgbin@0x0040e3d0"
+    },
+    {
+      "node_path": "/runtime/cpu/status/nvalue",
+      "suggested_value": "",
+      "source": "rgbin@0x004181f8"
+    },
+    {
+      "node_path": "/runtime/cpu/status/uvalue",
+      "suggested_value": "",
+      "source": "rgbin@0x004181b0"
+    },
+    {
+      "node_path": "/runtime/stats/naptsession:%d/tcp",
+      "suggested_value": "",
+      "source": "rgbin@0x004128cc"
+    },
+    {
+      "node_path": "/sys/snmptrap/status",
+      "suggested_value": "",
+      "source": "rgbin@0x0041cf24"
+    },
+    {
+      "node_path": "/wlan/inf:1/assoc_limit/number",
+      "suggested_value": "",
+      "source": "rgbin@0x0041be5c"
+    },
+    {
+      "node_path": "/sys/snmpd/commorun:",
+      "suggested_value": "",
+      "source": "rgbin@0x0041cdcc"
+    },
+    {
+      "node_path": "/runtime/cpu/status/wvalue",
+      "suggested_value": "",
+      "source": "rgbin@0x004182d0"
+    },
+    {
+      "node_path": "/runtime/macclone/addr",
+      "suggested_value": "",
+      "source": "rgbin@0x00409e9c"
+    },
+    {
+      "node_path": "/lan/ethernet/ip",
+      "suggested_value": "",
+      "source": "rgbin@0x0041201c"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/channel",
+      "suggested_value": "",
+      "source": "rgbin@0x0041bbe8"
+    },
+    {
+      "node_path": "/wlan/inf:1/channel",
+      "suggested_value": "",
+      "source": "rgbin@0x0041bbf0"
+    },
+    {
+      "node_path": "/sys/user:1/password",
+      "suggested_value": "",
+      "source": "rgbin@0x00413644"
+    },
+    {
+      "node_path": "/captival/mtd/html/offset",
+      "suggested_value": "",
+      "source": "rgbin@0x0040e3bc"
+    },
+    {
+      "node_path": "/captival/mtd/picture/offset",
+      "suggested_value": "",
+      "source": "rgbin@0x0040e280"
+    },
+    {
+      "node_path": "/runtime/wan/inf:1/mac",
+      "suggested_value": "",
+      "source": "rgbin@0x0041cc3c"
+    },
+    {
+      "node_path": "/runtime/cpu/status/xvalue",
+      "suggested_value": "",
+      "source": "rgbin@0x00418318"
+    },
+    {
+      "node_path": "/runtime/macaddr_ethernet",
+      "suggested_value": "",
+      "source": "rgbin@0x00409128"
+    },
+    {
+      "node_path": "/runtime/stats/naptsession:%d",
+      "suggested_value": "",
+      "source": "rgbin@0x00412a40"
+    },
+    {
+      "node_path": "/captival/mtd/html/state",
+      "suggested_value": "",
+      "source": "rgbin@0x0040e48c"
+    },
+    {
+      "node_path": "/runtime/sys/info/firmwareversion",
+      "suggested_value": "",
+      "source": "rgbin@0x0041bb10"
+    },
+    {
+      "node_path": "/captival/mtd/picture/size",
+      "suggested_value": "",
+      "source": "rgbin@0x0040e294"
+    },
+    {
+      "node_path": "/runtime/cpu/status/yvalue",
+      "suggested_value": "",
+      "source": "rgbin@0x00418360"
+    },
+    {
+      "node_path": "/wlan/inf:1/apmonitor",
+      "suggested_value": "",
+      "source": "rgbin@0x0041babc"
+    },
+    {
+      "node_path": "/runtime/update/notify",
+      "suggested_value": "",
+      "source": "rgbin@0x0040df8c"
+    },
+    {
+      "node_path": "/runtime/update/status",
+      "suggested_value": "",
+      "source": "rgbin@0x0040be6c"
+    },
+    {
+      "node_path": "/runtime/layout/image_sign",
+      "suggested_value": "",
+      "source": "rgbin@0x0040c6cc"
+    },
+    {
+      "node_path": "/runtime/stats/naptsession:%d/udp",
+      "suggested_value": "",
+      "source": "rgbin@0x00412958"
+    },
+    {
+      "node_path": "/runtime/cpu/status/zvalue",
+      "suggested_value": "",
+      "source": "rgbin@0x004183a8"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/dfschannelchange",
+      "suggested_value": "",
+      "source": "rgbin@0x0041ca4c"
+    },
+    {
+      "node_path": "/runtime/mem/status/alluser_utilize",
+      "suggested_value": "",
+      "source": "rgbin@0x0041ba1c"
+    },
+    {
+      "node_path": "/runtime/cpu/status/ivalue",
+      "suggested_value": "",
+      "source": "rgbin@0x00418288"
+    },
+    {
+      "node_path": "/captival/mtd/html/name",
+      "suggested_value": "",
+      "source": "rgbin@0x0040e4a0"
+    },
+    {
+      "node_path": "/runtime/cpu/status/alluser_utilize",
+      "suggested_value": "",
+      "source": "rgbin@0x0041b9d4"
+    },
+    {
+      "node_path": "/sys/snmpd/hostip:",
+      "suggested_value": "",
+      "source": "rgbin@0x0041cb4c"
+    },
+    {
+      "node_path": "/runtime/cpu/status/svalue",
+      "suggested_value": "",
+      "source": "rgbin@0x00418240"
+    },
+    {
+      "node_path": "/sys/user:1/name",
+      "suggested_value": "",
+      "source": "rgbin@0x00413618"
+    },
+    {
+      "node_path": "/runtime/stats/naptsession:%d/ipaddr",
+      "suggested_value": "",
+      "source": "rgbin@0x00412844"
+    },
+    {
+      "node_path": "/runtime/snmp/debug",
+      "suggested_value": "",
+      "source": "rgbin@0x0041b4a8"
+    },
+    {
+      "node_path": "/runtime/web_session/mac",
+      "suggested_value": "",
+      "source": "rgbin@0x00408ae4"
+    },
+    {
+      "node_path": "/wlan/inf:1/autochannel",
+      "suggested_value": "",
+      "source": "rgbin@0x0041bec4"
+    },
+    {
+      "node_path": "/wlan/inf:1/channel_old",
+      "suggested_value": "",
+      "source": "rgbin@0x0041bf38"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/client:1/mac",
+      "suggested_value": "",
+      "source": "rgbin@0x0041c070"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/up_times",
+      "suggested_value": "",
+      "source": "rgbin@0x0041c644"
+    },
+    {
+      "node_path": "/dnsrelay/mode",
+      "suggested_value": "",
+      "source": "rgbin@0x00412464"
+    },
+    {
+      "node_path": "/runtime/stats/udpsession",
+      "suggested_value": "",
+      "source": "rgbin@0x00412b6c"
+    },
+    {
+      "node_path": "/debug/trap",
+      "suggested_value": "",
+      "source": "rgbin@0x0041c100"
+    },
+    {
+      "node_path": "/sys/snmpd/secumodel:",
+      "suggested_value": "",
+      "source": "rgbin@0x0041cbc8"
+    },
+    {
+      "node_path": "/wlan/inf:1/apmonitor_last",
+      "suggested_value": "",
+      "source": "rgbin@0x0041bad8"
+    },
+    {
+      "node_path": "/runtime/stats/tcpsession",
+      "suggested_value": "",
+      "source": "rgbin@0x00412ae4"
+    },
+    {
+      "node_path": "/runtime/thief/accelate",
+      "suggested_value": "",
+      "source": "trap_monitor@0x00401008"
+    },
+    {
+      "node_path": "/runtime/wan/inf:1/ip",
+      "suggested_value": "",
+      "source": "trap_monitor@0x00400e94"
+    },
+    {
+      "node_path": "/runtime/thief/addpath",
+      "suggested_value": "",
+      "source": "trap_monitor@0x00401038"
+    },
+    {
+      "node_path": "/sys/wtp/capwap/enable",
+      "suggested_value": "",
+      "source": "trap_monitor@0x00400e40"
+    },
+    {
+      "node_path": "/runtime/thief",
+      "suggested_value": "",
+      "source": "trap_monitor@0x00400ffc"
+    },
+    {
+      "node_path": "/runtime/ac/login_ac_ip",
+      "suggested_value": "",
+      "source": "trap_monitor@0x00400e80"
+    },
+    {
+      "node_path": "/captival/captival_timeout",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bf6c"
+    },
+    {
+      "node_path": "/wlan/inf:1/igmpsnoop",
+      "suggested_value": "",
+      "source": "xmldb@0x00408dac"
+    },
+    {
+      "node_path": "/wlan/inf:1/authentication",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b184"
+    },
+    {
+      "node_path": "/wlan/inf:2/ssidhidden",
+      "suggested_value": "",
+      "source": "xmldb@0x004087ec"
+    },
+    {
+      "node_path": "/lan/ethernet/updownlink",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c158"
+    },
+    {
+      "node_path": "/wlan/inf:2/acl/mac",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b904"
+    },
+    {
+      "node_path": "/aparray/sync/acl",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b870"
+    },
+    {
+      "node_path": "/wlan/inf:1/defkey",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b1fc"
+    },
+    {
+      "node_path": "/aparray/sync/wlmode",
+      "suggested_value": "",
+      "source": "xmldb@0x00408974"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/b_acct",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b528"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/embradius/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b258"
+    },
+    {
+      "node_path": "/wlan/inf:2/acktimeout_g",
+      "suggested_value": "",
+      "source": "xmldb@0x00408cdc"
+    },
+    {
+      "node_path": "/aparray/sync/security",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b14c"
+    },
+    {
+      "node_path": "/captival/http_url",
+      "suggested_value": "",
+      "source": "xmldb@0x0040be98"
+    },
+    {
+      "node_path": "/aparray/sync/arrayauth",
+      "suggested_value": "",
+      "source": "xmldb@0x00409518"
+    },
+    {
+      "node_path": "/aparray/sync/autochannel",
+      "suggested_value": "",
+      "source": "xmldb@0x0040880c"
+    },
+    {
+      "node_path": "/wlan/inf:2/acktimeout_a",
+      "suggested_value": "",
+      "source": "xmldb@0x00408c9c"
+    },
+    {
+      "node_path": "/sys/group_vlan",
+      "suggested_value": "",
+      "source": "xmldb@0x0040989c"
+    },
+    {
+      "node_path": "/wlan/inf:2/autorekey",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b414"
+    },
+    {
+      "node_path": "/aparray/sync/wrc",
+      "suggested_value": "",
+      "source": "xmldb@0x0040962c"
+    },
+    {
+      "node_path": "/wlan/inf:1/ssid",
+      "suggested_value": "",
+      "source": "xmldb@0x00408754"
+    },
+    {
+      "node_path": "/aparray/sync/connectionlimit",
+      "suggested_value": "",
+      "source": "xmldb@0x00408dec"
+    },
+    {
+      "node_path": "/lan/ethernet/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x00409920"
+    },
+    {
+      "node_path": "/wlan/inf:2/ssid",
+      "suggested_value": "",
+      "source": "xmldb@0x00408774"
+    },
+    {
+      "node_path": "/wlan/inf:1/wlmode",
+      "suggested_value": "",
+      "source": "xmldb@0x004089ac"
+    },
+    {
+      "node_path": "/wlan/inf:1/updownlink",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c178"
+    },
+    {
+      "node_path": "/sys/auto_set_pvid",
+      "suggested_value": "",
+      "source": "xmldb@0x00409940"
+    },
+    {
+      "node_path": "/sys/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x00409900"
+    },
+    {
+      "node_path": "/wlan/inf:2/fixedrate",
+      "suggested_value": "",
+      "source": "xmldb@0x00408a44"
+    },
+    {
+      "node_path": "/sys/vlan_mode",
+      "suggested_value": "",
+      "source": "xmldb@0x004098c0"
+    },
+    {
+      "node_path": "/aparray/sync/igmpsnoop",
+      "suggested_value": "",
+      "source": "xmldb@0x00408d74"
+    },
+    {
+      "node_path": "/wlan/inf:2/shortgi",
+      "suggested_value": "",
+      "source": "xmldb@0x00408d54"
+    },
+    {
+      "node_path": "/sys/pingctl",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bb64"
+    },
+    {
+      "node_path": "/aparray/sync/captivalstate",
+      "suggested_value": "",
+      "source": "xmldb@0x004093c0"
+    },
+    {
+      "node_path": "/wlan/inf:2/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x00408954"
+    },
+    {
+      "node_path": "/wlan/inf:1/acktimeout_g",
+      "suggested_value": "",
+      "source": "xmldb@0x00408cbc"
+    },
+    {
+      "node_path": "/wlan/inf:2/multi/index:%d/captival/state",
+      "suggested_value": "",
+      "source": "xmldb@0x004094dc"
+    },
+    {
+      "node_path": "/aparray/sync/multi/security",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b564"
+    },
+    {
+      "node_path": "/wlan/inf:1/aclallbywlmode",
+      "suggested_value": "",
+      "source": "xmldb@0x00408ee4"
+    },
+    {
+      "node_path": "/wlan/inf:1/acktimeout_a",
+      "suggested_value": "",
+      "source": "xmldb@0x00408c7c"
+    },
+    {
+      "node_path": "/aparray/sync/dtim",
+      "suggested_value": "",
+      "source": "xmldb@0x00408adc"
+    },
+    {
+      "node_path": "/wlan/inf:2/aclallbywlmode",
+      "suggested_value": "",
+      "source": "xmldb@0x00408f04"
+    },
+    {
+      "node_path": "/runtime/aparray/version_flag",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c3d8"
+    },
+    {
+      "node_path": "/wlan/inf:2/autochannel",
+      "suggested_value": "",
+      "source": "xmldb@0x00408864"
+    },
+    {
+      "node_path": "/aparray/sync/consoleprotocol",
+      "suggested_value": "",
+      "source": "xmldb@0x0040ba30"
+    },
+    {
+      "node_path": "/aparray/sync/fixedrate",
+      "suggested_value": "",
+      "source": "xmldb@0x004089ec"
+    },
+    {
+      "node_path": "/aparray/sync/ssid",
+      "suggested_value": "",
+      "source": "xmldb@0x00408718"
+    },
+    {
+      "node_path": "/wlan/inf:1/wmm/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x00408c04"
+    },
+    {
+      "node_path": "/aparray/sync/pingctl",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bb2c"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/acct",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b4ec"
+    },
+    {
+      "node_path": "/vlanif/static/gateway",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bf30"
+    },
+    {
+      "node_path": "/wlan/inf:2/defkey",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b220"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b314"
+    },
+    {
+      "node_path": "/wlan/inf:2/assoc_limit/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x00408e44"
+    },
+    {
+      "node_path": "/aparray/sync/multi/ssid_hidden",
+      "suggested_value": "",
+      "source": "xmldb@0x004091c0"
+    },
+    {
+      "node_path": "/wlan/inf:1/w_partition",
+      "suggested_value": "",
+      "source": "xmldb@0x00408fe0"
+    },
+    {
+      "node_path": "/captival/ssid:",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bed8"
+    },
+    {
+      "node_path": "/aparray/sync/arpspoofing",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bf9c"
+    },
+    {
+      "node_path": "/captival/auth:6/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040beb8"
+    },
+    {
+      "node_path": "/wlan/inf:1/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x00409960"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/b_acct",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b54c"
+    },
+    {
+      "node_path": "/wlan/inf:2/w_partition",
+      "suggested_value": "",
+      "source": "xmldb@0x00409000"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/w_partition",
+      "suggested_value": "",
+      "source": "xmldb@0x00409050"
+    },
+    {
+      "node_path": "/wlan/inf:1/shortgi",
+      "suggested_value": "",
+      "source": "xmldb@0x00408d34"
+    },
+    {
+      "node_path": "/captival/auth:4/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040be34"
+    },
+    {
+      "node_path": "/captival/auth:1/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bcfc"
+    },
+    {
+      "node_path": "/aparray/sync/autorf",
+      "suggested_value": "",
+      "source": "xmldb@0x00409574"
+    },
+    {
+      "node_path": "/wlan/inf:1/beaconinterval",
+      "suggested_value": "",
+      "source": "xmldb@0x00408a9c"
+    },
+    {
+      "node_path": "/vlanif/static/netmask",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bf14"
+    },
+    {
+      "node_path": "/aparray/sync/qos",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c0f8"
+    },
+    {
+      "node_path": "/wlan/inf:1/ssidhidden",
+      "suggested_value": "",
+      "source": "xmldb@0x004087cc"
+    },
+    {
+      "node_path": "/wlan/inf:2/authentication",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b1a0"
+    },
+    {
+      "node_path": "/aparray/sync/login",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bb84"
+    },
+    {
+      "node_path": "/wlan/inf:2/multi/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b784"
+    },
+    {
+      "node_path": "/arpspoofing/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bfd8"
+    },
+    {
+      "node_path": "/trafficctrl/qos/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c0a8"
+    },
+    {
+      "node_path": "/aparray/sync/channelwidth",
+      "suggested_value": "",
+      "source": "xmldb@0x00408884"
+    },
+    {
+      "node_path": "/arpspoofing/static/index:",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bffc"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b2f4"
+    },
+    {
+      "node_path": "/wlan/inf:2/updownlink",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c194"
+    },
+    {
+      "node_path": "/aparray/sync/time",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bc58"
+    },
+    {
+      "node_path": "/wlan/inf:1/cwmmode",
+      "suggested_value": "",
+      "source": "xmldb@0x004088bc"
+    },
+    {
+      "node_path": "/wlan/inf:2/multi/index",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c1d8"
+    },
+    {
+      "node_path": "/captival/auth:3/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bdec"
+    },
+    {
+      "node_path": "/aparray/sync/linkintegrity",
+      "suggested_value": "",
+      "source": "xmldb@0x00408f24"
+    },
+    {
+      "node_path": "/aparray/sync/ssidhidden",
+      "suggested_value": "",
+      "source": "xmldb@0x00408794"
+    },
+    {
+      "node_path": "/wlan/inf:2/d_wep_rekey_interval",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b39c"
+    },
+    {
+      "node_path": "/wlan/inf:2/wlan_bytes_lim",
+      "suggested_value": "",
+      "source": "xmldb@0x00408ec4"
+    },
+    {
+      "node_path": "/wlan/inf:1/assoc_limit/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x00408e24"
+    },
+    {
+      "node_path": "/wlan/inf:1/acl/mode",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b8ac"
+    },
+    {
+      "node_path": "/wlan/inf:1/d_wep_rekey_interval",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b384"
+    },
+    {
+      "node_path": "/wlan/inf:2/igmpsnoop",
+      "suggested_value": "",
+      "source": "xmldb@0x00408dcc"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c088"
+    },
+    {
+      "node_path": "/captival/url_state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040be78"
+    },
+    {
+      "node_path": "/lan/dhcp/server",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b988"
+    },
+    {
+      "node_path": "/captival/auth:2/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bda8"
+    },
+    {
+      "node_path": "/wlan/inf:1/wds/index:%d/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x00409aa4"
+    },
+    {
+      "node_path": "/wlan/inf:2/beaconinterval",
+      "suggested_value": "",
+      "source": "xmldb@0x00408abc"
+    },
+    {
+      "node_path": "/wlan/inf:2/dtim",
+      "suggested_value": "",
+      "source": "xmldb@0x00408b34"
+    },
+    {
+      "node_path": "/wlan/inf:2/wds/list/index",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c260"
+    },
+    {
+      "node_path": "/aparray/sync/loadbalance",
+      "suggested_value": "",
+      "source": "xmldb@0x004095d0"
+    },
+    {
+      "node_path": "/aparray/sync/acktimeout",
+      "suggested_value": "",
+      "source": "xmldb@0x00408c44"
+    },
+    {
+      "node_path": "/aparray/sync/multi/wmm",
+      "suggested_value": "",
+      "source": "xmldb@0x0040928c"
+    },
+    {
+      "node_path": "/sys/vlan_state",
+      "suggested_value": "",
+      "source": "xmldb@0x004098e0"
+    },
+    {
+      "node_path": "/captival/user:",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bd1c"
+    },
+    {
+      "node_path": "/wlan/inf:1/captival/state",
+      "suggested_value": "",
+      "source": "xmldb@0x004093fc"
+    },
+    {
+      "node_path": "/captival/auth:7/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bd64"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x004099dc"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/wepmode",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b1dc"
+    },
+    {
+      "node_path": "/vlanif/static/dns",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bf54"
+    },
+    {
+      "node_path": "/aparray/sync/system",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b9b4"
+    },
+    {
+      "node_path": "/wlan/inf:2/cwmmode",
+      "suggested_value": "",
+      "source": "xmldb@0x004088dc"
+    },
+    {
+      "node_path": "/wlan/inf:1/autorekey",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b3f8"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/embradius/eap_user",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b4cc"
+    },
+    {
+      "node_path": "/wlan/inf:2/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x00409980"
+    },
+    {
+      "node_path": "/aparray/sync/shortgi",
+      "suggested_value": "",
+      "source": "xmldb@0x00408cfc"
+    },
+    {
+      "node_path": "/wlan/inf:2/e_partition",
+      "suggested_value": "",
+      "source": "xmldb@0x00408fc0"
+    },
+    {
+      "node_path": "/wlan/inf:1/wlan_bytes_lim",
+      "suggested_value": "",
+      "source": "xmldb@0x00408ea4"
+    },
+    {
+      "node_path": "/aparray/sync/dhcp",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b950"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b768"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/grp_rekey_interval",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b3d8"
+    },
+    {
+      "node_path": "/wlan/inf:1/fixedrate",
+      "suggested_value": "",
+      "source": "xmldb@0x00408a24"
+    },
+    {
+      "node_path": "/wlan/inf:2/wds/index:%d/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x00409af0"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c1b4"
+    },
+    {
+      "node_path": "/wlan/inf:1/dtim",
+      "suggested_value": "",
+      "source": "xmldb@0x00408b14"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/pri_by_ssid",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b7a4"
+    },
+    {
+      "node_path": "/wlan/inf:1/wds/list/index",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c23c"
+    },
+    {
+      "node_path": "/wlan/inf:2/assoc_limit/number",
+      "suggested_value": "",
+      "source": "xmldb@0x00408e84"
+    },
+    {
+      "node_path": "/wlan/inf:2/ethlink",
+      "suggested_value": "",
+      "source": "xmldb@0x00408f80"
+    },
+    {
+      "node_path": "/aparray/sync/log",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c2f0"
+    },
+    {
+      "node_path": "/aparray/sync/multi/ssid",
+      "suggested_value": "",
+      "source": "xmldb@0x004090f0"
+    },
+    {
+      "node_path": "/sys/consoleprotocol/protocol",
+      "suggested_value": "",
+      "source": "xmldb@0x0040ba6c"
+    },
+    {
+      "node_path": "/wlan/inf:2/acl/mode",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b8c8"
+    },
+    {
+      "node_path": "/aparray/sync/wlanstate",
+      "suggested_value": "",
+      "source": "xmldb@0x004088fc"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/b_radius",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b48c"
+    },
+    {
+      "node_path": "/aparray/sync/captivalportal",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bcc0"
+    },
+    {
+      "node_path": "/aparray/sync/txpower",
+      "suggested_value": "",
+      "source": "xmldb@0x00408b54"
+    },
+    {
+      "node_path": "/aparray/sync/vlan",
+      "suggested_value": "",
+      "source": "xmldb@0x0040985c"
+    },
+    {
+      "node_path": "/wlan/inf:2/wmm/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x00408c24"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/radius",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b450"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/embradius/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b23c"
+    },
+    {
+      "node_path": "/aparray/sync/schedule",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c480"
+    },
+    {
+      "node_path": "/wlan/inf:2/multi/index:%d/vlan_id",
+      "suggested_value": "",
+      "source": "xmldb@0x00409a28"
+    },
+    {
+      "node_path": "/wlan/inf:2/multi/pri_by_ssid",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b7c0"
+    },
+    {
+      "node_path": "/aparray/sync/snmp",
+      "suggested_value": "",
+      "source": "xmldb@0x0040baac"
+    },
+    {
+      "node_path": "/wlan/inf:1/txpower",
+      "suggested_value": "",
+      "source": "xmldb@0x00408b8c"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/radius",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b434"
+    },
+    {
+      "node_path": "/wlan/inf:1/acl/mac",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b8e8"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/embradius/eap_user",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b4b4"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/wepmode",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b1c0"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/b_radius",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b470"
+    },
+    {
+      "node_path": "/aparray/sync/fairairtime",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c028"
+    },
+    {
+      "node_path": "/tc_monitor/mssid:",
+      "suggested_value": "",
+      "source": "xmldb@0x0040c0cc"
+    },
+    {
+      "node_path": "/wlan/inf:2/txpower",
+      "suggested_value": "",
+      "source": "xmldb@0x00408bac"
+    },
+    {
+      "node_path": "/wlan/inf:1/e_partition",
+      "suggested_value": "",
+      "source": "xmldb@0x00408fa0"
+    },
+    {
+      "node_path": "/acl/mac",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b92c"
+    },
+    {
+      "node_path": "/sys/consoleprotocol/timeout",
+      "suggested_value": "",
+      "source": "xmldb@0x0040ba94"
+    },
+    {
+      "node_path": "/vlanif/static/ip",
+      "suggested_value": "",
+      "source": "xmldb@0x0040bef8"
+    },
+    {
+      "node_path": "/wlan/inf:1/ethlink",
+      "suggested_value": "",
+      "source": "xmldb@0x00408f60"
+    },
+    {
+      "node_path": "/aparray/sync/multi/captival",
+      "suggested_value": "",
+      "source": "xmldb@0x00409438"
+    },
+    {
+      "node_path": "/wlan/inf:2/wpa/acct",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b508"
+    },
+    {
+      "node_path": "/aparray/sync/beaconinterval",
+      "suggested_value": "",
+      "source": "xmldb@0x00408a64"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/captival/state",
+      "suggested_value": "",
+      "source": "xmldb@0x0040948c"
+    },
+    {
+      "node_path": "/wlan/inf:2/captival/state",
+      "suggested_value": "",
+      "source": "xmldb@0x00409418"
+    },
+    {
+      "node_path": "/wlan/inf:1/enable",
+      "suggested_value": "",
+      "source": "xmldb@0x00408934"
+    },
+    {
+      "node_path": "/wlan/inf:2/wlmode",
+      "suggested_value": "",
+      "source": "xmldb@0x004089cc"
+    },
+    {
+      "node_path": "/aparray/sync/wmm",
+      "suggested_value": "",
+      "source": "xmldb@0x00408bcc"
+    },
+    {
+      "node_path": "/wlan/inf:1/wpa/grp_rekey_interval",
+      "suggested_value": "",
+      "source": "xmldb@0x0040b3bc"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/oldcrypterr",
+      "suggested_value": "",
+      "source": "statistic@0x0040362c"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/oldbytes",
+      "suggested_value": "",
+      "source": "statistic@0x004032f4"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/packets",
+      "suggested_value": "",
+      "source": "statistic@0x00402cf0"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showrx/micerr",
+      "suggested_value": "",
+      "source": "statistic@0x004029ac"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showrx/drop",
+      "suggested_value": "",
+      "source": "statistic@0x00402310"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showrx/crcerr",
+      "suggested_value": "",
+      "source": "statistic@0x00402544"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/statisitc/flag",
+      "suggested_value": "",
+      "source": "statistic@0x00402c5c"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showtx/retry",
+      "suggested_value": "",
+      "source": "statistic@0x00401c74"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/olddrop",
+      "suggested_value": "",
+      "source": "statistic@0x00403404"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/oldretry",
+      "suggested_value": "",
+      "source": "statistic@0x004030cc"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/ath:%d/rx/packets",
+      "suggested_value": "",
+      "source": "statistic@0x00400e20"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showtx/bytes",
+      "suggested_value": "",
+      "source": "statistic@0x0040180c"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/oldbytes",
+      "suggested_value": "",
+      "source": "statistic@0x00402ea4"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/ath:%d/rx/bytes",
+      "suggested_value": "",
+      "source": "statistic@0x00400cf0"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/oldphyerr",
+      "suggested_value": "",
+      "source": "statistic@0x00403740"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/bytes",
+      "suggested_value": "",
+      "source": "statistic@0x00403254"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/ath:%d/rx/drop",
+      "suggested_value": "",
+      "source": "statistic@0x004012e8"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/olddrop",
+      "suggested_value": "",
+      "source": "statistic@0x00402fb8"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/ath:%d/tx/packets",
+      "suggested_value": "",
+      "source": "statistic@0x00401080"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/drop",
+      "suggested_value": "",
+      "source": "statistic@0x00402f18"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/oldmicerr",
+      "suggested_value": "",
+      "source": "statistic@0x00403854"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/oldpackets",
+      "suggested_value": "",
+      "source": "statistic@0x004031e0"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/oldcrcerr",
+      "suggested_value": "",
+      "source": "statistic@0x00403518"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showrx/packets",
+      "suggested_value": "",
+      "source": "statistic@0x00401ea8"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showrx/crypterr",
+      "suggested_value": "",
+      "source": "statistic@0x00402778"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showtx/drop",
+      "suggested_value": "",
+      "source": "statistic@0x00401a40"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/ath:%d/tx/drop",
+      "suggested_value": "",
+      "source": "statistic@0x004011b0"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showrx/bytes",
+      "suggested_value": "",
+      "source": "statistic@0x004020dc"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/drop",
+      "suggested_value": "",
+      "source": "statistic@0x00403364"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/ath:%d/tx/bytes",
+      "suggested_value": "",
+      "source": "statistic@0x00400f50"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/rx/packets",
+      "suggested_value": "",
+      "source": "statistic@0x00403140"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/retry",
+      "suggested_value": "",
+      "source": "statistic@0x0040302c"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showtx/packets",
+      "suggested_value": "",
+      "source": "statistic@0x004015d8"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/statistic/clear",
+      "suggested_value": "",
+      "source": "statistic@0x00400c4c"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/bytes",
+      "suggested_value": "",
+      "source": "statistic@0x00402e04"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/showrx/phyerr",
+      "suggested_value": "",
+      "source": "statistic@0x00402be8"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/inf:%d/tx/oldpackets",
+      "suggested_value": "",
+      "source": "statistic@0x00402d90"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/client:%02d/mac",
+      "suggested_value": "",
+      "source": "static_dhcp@0x00400fc4"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%02d/state",
+      "suggested_value": "",
+      "source": "static_dhcp@0x00401084"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:%02d/up",
+      "suggested_value": "",
+      "source": "static_dhcp@0x004013f0"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/client:%02d/mac",
+      "suggested_value": "",
+      "source": "static_dhcp@0x00400ef0"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:%02d/mac",
+      "suggested_value": "",
+      "source": "static_dhcp@0x00400b20"
+    },
+    {
+      "node_path": "/runtime/dhcpserver/lease:%02d/mac",
+      "suggested_value": "",
+      "source": "static_dhcp@0x00400e2c"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/mssid:%02d/client:%02d/mac",
+      "suggested_value": "",
+      "source": "static_dhcp@0x00401110"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/mssid:%02d/client:%02d/mac",
+      "suggested_value": "",
+      "source": "static_dhcp@0x0040126c"
+    },
+    {
+      "node_path": "/wlan/inf:2/multi/index:%02d/state",
+      "suggested_value": "",
+      "source": "static_dhcp@0x004011e0"
+    },
+    {
+      "node_path": "/runtime/dhcpserver/lease:%02d/up",
+      "suggested_value": "",
+      "source": "static_dhcp@0x00400cf4"
+    },
+    {
+      "node_path": "/runtime/wireless/bandselection",
+      "suggested_value": "",
+      "source": "busybox@0x0040a844"
+    },
+    {
+      "node_path": "/sys/block",
+      "suggested_value": "",
+      "source": "busybox@0x00427d24"
+    },
+    {
+      "node_path": "/wlan/inf:%d/acl/mode",
+      "suggested_value": "",
+      "source": "busybox@0x0040a9c8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/acl/mac:%d",
+      "suggested_value": "",
+      "source": "busybox@0x0040aa7c"
+    },
+    {
+      "node_path": "/wlan/inf:1/aparray_cfg_version",
+      "suggested_value": "",
+      "source": "busybox@0x0040b0cc"
+    },
+    {
+      "node_path": "/runtime/sys/fw_size",
+      "suggested_value": "",
+      "source": "busybox@0x0040aafc"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/mac",
+      "suggested_value": "",
+      "source": "iwlist@0x00401b80"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/used",
+      "suggested_value": "",
+      "source": "iwlist@0x00401b08"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/channel",
+      "suggested_value": "",
+      "source": "iwlist@0x00401a88"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/band",
+      "suggested_value": "",
+      "source": "iwlist@0x00403540"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan/ap_index:%02d",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a1f8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/singleap_num:%d",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a194"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/ch_mode",
+      "suggested_value": "",
+      "source": "iwlist@0x004019e8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/ssid",
+      "suggested_value": "",
+      "source": "iwlist@0x00401ee0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/status",
+      "suggested_value": "",
+      "source": "iwlist@0x00401c04"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/mrssi:%d",
+      "suggested_value": "",
+      "source": "iwlist@0x0040adb4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/noisefloor:1",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a4f0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/type",
+      "suggested_value": "",
+      "source": "iwlist@0x00401c80"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/noisefloor:6",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a710"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/time",
+      "suggested_value": "",
+      "source": "iwlist@0x004027f0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/arssi:6",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a6b4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/noisefloor:11",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a980"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client",
+      "suggested_value": "",
+      "source": "iwlist@0x004062f8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%02d/auth",
+      "suggested_value": "",
+      "source": "iwlist@0x0040af30"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap",
+      "suggested_value": "",
+      "source": "iwlist@0x00406370"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/arssi:1",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a494"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/time",
+      "suggested_value": "",
+      "source": "iwlist@0x00401d70"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/channel",
+      "suggested_value": "",
+      "source": "iwlist@0x004031e4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%02d/auth",
+      "suggested_value": "",
+      "source": "iwlist@0x0040aee8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan",
+      "suggested_value": "",
+      "source": "iwlist@0x00406334"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/noisefloor:%02d",
+      "suggested_value": "",
+      "source": "iwlist@0x00408ba8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap_scan/client:%02d/band",
+      "suggested_value": "",
+      "source": "iwlist@0x00401cf8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%02d/wlmode",
+      "suggested_value": "",
+      "source": "iwlist@0x00409104"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%02d/rssidbm",
+      "suggested_value": "",
+      "source": "iwlist@0x00409f60"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/mrssi:%02d",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a0c8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/arssipri:%d",
+      "suggested_value": "",
+      "source": "iwlist@0x0040ad48"
+    },
+    {
+      "node_path": "/wlan/ch_mode",
+      "suggested_value": "",
+      "source": "iwlist@0x004018a0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/index",
+      "suggested_value": "",
+      "source": "iwlist@0x00402978"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/mrssidbm:%02d",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a154"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/ap_num",
+      "suggested_value": "",
+      "source": "iwlist@0x00409d54"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo",
+      "suggested_value": "",
+      "source": "iwlist@0x004063ac"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%02d/rssi",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a080"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/arssix:%d",
+      "suggested_value": "",
+      "source": "iwlist@0x0040aa24"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/arssi:11",
+      "suggested_value": "",
+      "source": "iwlist@0x0040a924"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%02d/wdsmode",
+      "suggested_value": "",
+      "source": "iwlist@0x00407768"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%02d/rssi",
+      "suggested_value": "",
+      "source": "iwlist@0x00407070"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%02d/mac",
+      "suggested_value": "",
+      "source": "iwlist@0x00408d84"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/arssi:%02d",
+      "suggested_value": "",
+      "source": "iwlist@0x00408ad8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/status",
+      "suggested_value": "",
+      "source": "iwlist@0x004034c4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%02d/wlmode",
+      "suggested_value": "",
+      "source": "iwlist@0x00406d94"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%02d/mac",
+      "suggested_value": "",
+      "source": "iwlist@0x00406ac8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/time_str",
+      "suggested_value": "",
+      "source": "iwlist@0x00402870"
+    },
+    {
+      "node_path": "/wlan/inf:%d/rogue_ap/client/nchans",
+      "suggested_value": "",
+      "source": "iwlist@0x0040ac54"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%02d/chan",
+      "suggested_value": "",
+      "source": "iwlist@0x00409064"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/type",
+      "suggested_value": "",
+      "source": "iwlist@0x00403168"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%02d/chan",
+      "suggested_value": "",
+      "source": "iwlist@0x00406d18"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/mac",
+      "suggested_value": "",
+      "source": "iwlist@0x00403044"
+    },
+    {
+      "node_path": "/runtime/time/time",
+      "suggested_value": "",
+      "source": "iwlist@0x00401e7c"
+    },
+    {
+      "node_path": "/runtime/time/date",
+      "suggested_value": "",
+      "source": "iwlist@0x00401dec"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%02d/ssid",
+      "suggested_value": "",
+      "source": "iwlist@0x00406ef0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/ssid",
+      "suggested_value": "",
+      "source": "iwlist@0x004030c0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/apscanlistinfo/apscan:%02d/ssid",
+      "suggested_value": "",
+      "source": "iwlist@0x00409210"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%02d/used",
+      "suggested_value": "",
+      "source": "iwlist@0x004035bc"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/tag/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402868"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/untag",
+      "suggested_value": "",
+      "source": "fresetd@0x004021f4"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/none",
+      "suggested_value": "",
+      "source": "fresetd@0x00402458"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x004024f8"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/none",
+      "suggested_value": "",
+      "source": "fresetd@0x0040215c"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/tag",
+      "suggested_value": "",
+      "source": "fresetd@0x00402308"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/tag/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x004022a8"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/none/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402220"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/untag/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402348"
+    },
+    {
+      "node_path": "/runtime/layout/countrycode",
+      "suggested_value": "",
+      "source": "fresetd@0x0040342c"
+    },
+    {
+      "node_path": "/runtime/stats/memfree",
+      "suggested_value": "",
+      "source": "fresetd@0x00403b8c"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/tag",
+      "suggested_value": "",
+      "source": "fresetd@0x004021a8"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/eth:1/egress",
+      "suggested_value": "",
+      "source": "fresetd@0x0040258c"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/ath:%d/egress",
+      "suggested_value": "",
+      "source": "fresetd@0x00402800"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/sys:1/egress",
+      "suggested_value": "",
+      "source": "fresetd@0x004026b4"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/tag/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402188"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/untag/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402888"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/none/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402650"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/untag/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x004021d4"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/channeltable/od_channel:%d/channel",
+      "suggested_value": "",
+      "source": "fresetd@0x004039b8"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/none",
+      "suggested_value": "",
+      "source": "fresetd@0x00402244"
+    },
+    {
+      "node_path": "/wan/rg/inf:1/mode",
+      "suggested_value": "",
+      "source": "fresetd@0x00401fb8"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/none/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x0040284c"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/tag/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x004020a4"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/untag/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402758"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/none/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x0040213c"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/tag",
+      "suggested_value": "",
+      "source": "fresetd@0x004020c4"
+    },
+    {
+      "node_path": "/wlan/inf:1/ap_mode",
+      "suggested_value": "",
+      "source": "fresetd@0x00401f68"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/tag/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x004025fc"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/channeltable/od_wdschannel:%d/channel",
+      "suggested_value": "",
+      "source": "fresetd@0x00403a6c"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/channeltable/channel:%d/channel",
+      "suggested_value": "",
+      "source": "fresetd@0x004037a4"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/channeltable",
+      "suggested_value": "",
+      "source": "fresetd@0x00403404"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/untag/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x0040262c"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/none/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402780"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/sys:1/tag/index:%d/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x00402724"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/channeltable/wdschannel:%d/channel",
+      "suggested_value": "",
+      "source": "fresetd@0x004038f8"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/channeltable/channel:%d/channel",
+      "suggested_value": "",
+      "source": "fresetd@0x0040384c"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/none/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x004023f0"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/untag",
+      "suggested_value": "",
+      "source": "fresetd@0x00402110"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/channeltable/channel:1/channel",
+      "suggested_value": "",
+      "source": "fresetd@0x00403394"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/ath:%d/untag",
+      "suggested_value": "",
+      "source": "fresetd@0x004023b0"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/channeltable",
+      "suggested_value": "",
+      "source": "fresetd@0x004033b4"
+    },
+    {
+      "node_path": "/runtime/sys/group_vlan/eth:1/untag/index:1/group_vid",
+      "suggested_value": "",
+      "source": "fresetd@0x004020f0"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/channeltable/channel:1/channel",
+      "suggested_value": "",
+      "source": "fresetd@0x004033e0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wmm/enable",
+      "suggested_value": "",
+      "source": "cli@0x0041f770"
+    },
+    {
+      "node_path": "/runtime/bootver/version",
+      "suggested_value": "",
+      "source": "cli@0x00408494"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/ssid_index",
+      "suggested_value": "",
+      "source": "cli@0x0041198c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wpa/b_radiussecret",
+      "suggested_value": "",
+      "source": "cli@0x004531f4"
+    },
+    {
+      "node_path": "/sys/snmpd/readview:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c374"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/authtype",
+      "suggested_value": "",
+      "source": "cli@0x0040d168"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/ip",
+      "suggested_value": "",
+      "source": "cli@0x004389f0"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/rule/index",
+      "suggested_value": "",
+      "source": "cli@0x00448aa0"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/other/limit",
+      "suggested_value": "",
+      "source": "cli@0x00449f0c"
+    },
+    {
+      "node_path": "/runtime/time/week",
+      "suggested_value": "",
+      "source": "cli@0x00442d84"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/aparray_password",
+      "suggested_value": "",
+      "source": "cli@0x004391a8"
+    },
+    {
+      "node_path": "/captival/ldap/attribute",
+      "suggested_value": "",
+      "source": "cli@0x00457fb0"
+    },
+    {
+      "node_path": "/inet/entry:1/ipv6/mode",
+      "suggested_value": "",
+      "source": "cli@0x00431e70"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/rssi",
+      "suggested_value": "",
+      "source": "cli@0x00411abc"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:2/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043af5c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/agingbydatarate",
+      "suggested_value": "",
+      "source": "cli@0x00416ca4"
+    },
+    {
+      "node_path": "/captival/radius/acct_server_port",
+      "suggested_value": "",
+      "source": "cli@0x00457468"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user2/priority",
+      "suggested_value": "",
+      "source": "cli@0x00449634"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/apscanlistinfo/apscan:%02d/rssi",
+      "suggested_value": "",
+      "source": "cli@0x0040f8cc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/zonedefence",
+      "suggested_value": "",
+      "source": "cli@0x0043f6a0"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/service_port",
+      "suggested_value": "",
+      "source": "cli@0x00456e84"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/sun",
+      "suggested_value": "",
+      "source": "cli@0x00440db4"
+    },
+    {
+      "node_path": "/sys/swcontroller/service_port",
+      "suggested_value": "",
+      "source": "cli@0x00456cfc"
+    },
+    {
+      "node_path": "/captival/ldap/autoid",
+      "suggested_value": "",
+      "source": "cli@0x00458074"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%d/ssid",
+      "suggested_value": "",
+      "source": "cli@0x00409d0c"
+    },
+    {
+      "node_path": "/sys/snmpd/groupname:1",
+      "suggested_value": "",
+      "source": "cli@0x0042aca4"
+    },
+    {
+      "node_path": "/wireless/wepkey:%d",
+      "suggested_value": "",
+      "source": "cli@0x00411020"
+    },
+    {
+      "node_path": "/sys/web/enable",
+      "suggested_value": "",
+      "source": "cli@0x0040ce3c"
+    },
+    {
+      "node_path": "/captival/pop3/server_ip",
+      "suggested_value": "",
+      "source": "cli@0x00457e60"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user1/priority",
+      "suggested_value": "",
+      "source": "cli@0x004476f8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/agingbyrssithreshhold",
+      "suggested_value": "",
+      "source": "cli@0x00416848"
+    },
+    {
+      "node_path": "/captival/client_timeout",
+      "suggested_value": "",
+      "source": "cli@0x00457d34"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user3/endport",
+      "suggested_value": "",
+      "source": "cli@0x004471b0"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:%d/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043d270"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/time",
+      "suggested_value": "",
+      "source": "cli@0x0041192c"
+    },
+    {
+      "node_path": "/sys/snmpd/secumodel:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042efb0"
+    },
+    {
+      "node_path": "/wireless/keylength",
+      "suggested_value": "",
+      "source": "cli@0x00410f6c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/autorekey/enable",
+      "suggested_value": "",
+      "source": "cli@0x00443194"
+    },
+    {
+      "node_path": "/wlan/inf:%d/vhtrate",
+      "suggested_value": "",
+      "source": "cli@0x00418b90"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:17/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a23c"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:6/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00414c08"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/pri_by_ssid",
+      "suggested_value": "",
+      "source": "cli@0x0041c5e8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/ssidhidden",
+      "suggested_value": "",
+      "source": "cli@0x0041f7c8"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/psmode",
+      "suggested_value": "",
+      "source": "cli@0x00411b3c"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:10/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043acbc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/fixpower",
+      "suggested_value": "",
+      "source": "cli@0x0040ef90"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/state",
+      "suggested_value": "",
+      "source": "cli@0x0041c538"
+    },
+    {
+      "node_path": "/wlan/inf:1/w80211d",
+      "suggested_value": "",
+      "source": "cli@0x00410834"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/band",
+      "suggested_value": "",
+      "source": "cli@0x00427cb4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/shortgi",
+      "suggested_value": "",
+      "source": "cli@0x0041276c"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/rule/index:%d/downlink",
+      "suggested_value": "",
+      "source": "cli@0x00446490"
+    },
+    {
+      "node_path": "/wlan/inf:1/arrayrole_original",
+      "suggested_value": "",
+      "source": "cli@0x00437bf0"
+    },
+    {
+      "node_path": "/sys/snmpd/notifyview:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c3ac"
+    },
+    {
+      "node_path": "/wlan/inf:1/wepkey",
+      "suggested_value": "",
+      "source": "cli@0x004143cc"
+    },
+    {
+      "node_path": "/sys/snmpd/privprotocol:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c9d8"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/ath:1/egress",
+      "suggested_value": "",
+      "source": "cli@0x0044da3c"
+    },
+    {
+      "node_path": "/sys/mac_acl:%d/total_num",
+      "suggested_value": "",
+      "source": "cli@0x004282c8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/multi/index:%d/passphrase",
+      "suggested_value": "",
+      "source": "cli@0x00443220"
+    },
+    {
+      "node_path": "/captival/user:%d/group",
+      "suggested_value": "",
+      "source": "cli@0x00457800"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:2/rogue_ap_scan/client:%02d/mac",
+      "suggested_value": "",
+      "source": "cli@0x0040fd6c"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:21/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a920"
+    },
+    {
+      "node_path": "/sys/snmpd/hostip:1",
+      "suggested_value": "",
+      "source": "cli@0x0042ebe0"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/server_ip",
+      "suggested_value": "",
+      "source": "cli@0x00456e4c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/backup_number",
+      "suggested_value": "",
+      "source": "cli@0x004382a8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/agingbyrssi",
+      "suggested_value": "",
+      "source": "cli@0x00407fe0"
+    },
+    {
+      "node_path": "/tc_monitor/mssid:%d/downratetype",
+      "suggested_value": "",
+      "source": "cli@0x0045101c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:2/apscanlistinfo/apscan/ap_index:%02d",
+      "suggested_value": "",
+      "source": "cli@0x0040fbb8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/aclbyrssithreshhold",
+      "suggested_value": "",
+      "source": "cli@0x00407058"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:22/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a8cc"
+    },
+    {
+      "node_path": "/runtime/sys/swcontroller/ipaddr",
+      "suggested_value": "",
+      "source": "cli@0x00459810"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wpa/acctstate",
+      "suggested_value": "",
+      "source": "cli@0x00454fc4"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/wds:%d/client:%d/mode",
+      "suggested_value": "",
+      "source": "cli@0x0040a1d8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/beaconinterval",
+      "suggested_value": "",
+      "source": "cli@0x0041e3c8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/aclbyrssi",
+      "suggested_value": "",
+      "source": "cli@0x0041815c"
+    },
+    {
+      "node_path": "/runtime/inet/entry:1/ipv6/ipaddr",
+      "suggested_value": "",
+      "source": "cli@0x00432004"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/timer",
+      "suggested_value": "",
+      "source": "cli@0x00439288"
+    },
+    {
+      "node_path": "/sys/autorf/server/thresold/rssi",
+      "suggested_value": "",
+      "source": "cli@0x00420ec8"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:8/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043ad64"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/rx_byte",
+      "suggested_value": "",
+      "source": "cli@0x00411b7c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/slaver_number",
+      "suggested_value": "",
+      "source": "cli@0x004382c4"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/group_name",
+      "suggested_value": "",
+      "source": "cli@0x00456f2c"
+    },
+    {
+      "node_path": "/wlan/inf:1/arrayrole",
+      "suggested_value": "",
+      "source": "cli@0x00437cd8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/manrate",
+      "suggested_value": "",
+      "source": "cli@0x00418bd8"
+    },
+    {
+      "node_path": "/arpspoofing/static/index:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x004441c0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:",
+      "suggested_value": "",
+      "source": "cli@0x0040ad88"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/role",
+      "suggested_value": "",
+      "source": "cli@0x004399d4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wpa/wepmode",
+      "suggested_value": "",
+      "source": "cli@0x0040de38"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/role",
+      "suggested_value": "",
+      "source": "cli@0x004391fc"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:1/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043afb0"
+    },
+    {
+      "node_path": "/sys/snmpd/writeview:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c390"
+    },
+    {
+      "node_path": "/sys/adminlimit/status",
+      "suggested_value": "",
+      "source": "cli@0x004453b4"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/ftp/priority",
+      "suggested_value": "",
+      "source": "cli@0x00449204"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/timer",
+      "suggested_value": "",
+      "source": "cli@0x004382fc"
+    },
+    {
+      "node_path": "/captival/ldap/passwd",
+      "suggested_value": "",
+      "source": "cli@0x00457250"
+    },
+    {
+      "node_path": "/captival/ldap/server_ip",
+      "suggested_value": "",
+      "source": "cli@0x00458328"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/ip",
+      "suggested_value": "",
+      "source": "cli@0x0043999c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/agingbydrthreshhold",
+      "suggested_value": "",
+      "source": "cli@0x004165b8"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/aui/priority",
+      "suggested_value": "",
+      "source": "cli@0x004480f8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/txpower",
+      "suggested_value": "",
+      "source": "cli@0x0041efec"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d",
+      "suggested_value": "",
+      "source": "cli@0x0044186c"
+    },
+    {
+      "node_path": "/captival/user:%d/pass",
+      "suggested_value": "",
+      "source": "cli@0x004577e4"
+    },
+    {
+      "node_path": "/wlan/inf:1/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x00426094"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/backup_number",
+      "suggested_value": "",
+      "source": "cli@0x00438a60"
+    },
+    {
+      "node_path": "/wlan/inf:%d/keylength",
+      "suggested_value": "",
+      "source": "cli@0x004256dc"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/name",
+      "suggested_value": "",
+      "source": "cli@0x004410e8"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user2/endport",
+      "suggested_value": "",
+      "source": "cli@0x00449834"
+    },
+    {
+      "node_path": "/tc_monitor/mssid:%d/downrate",
+      "suggested_value": "",
+      "source": "cli@0x00451010"
+    },
+    {
+      "node_path": "/time/timezone",
+      "suggested_value": "",
+      "source": "cli@0x0041cbd8"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/unlistclientstraffic",
+      "suggested_value": "",
+      "source": "cli@0x00446808"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/arrayname",
+      "suggested_value": "",
+      "source": "cli@0x004389b8"
+    },
+    {
+      "node_path": "/runtime/inet/entry:1/ipv6/prefix",
+      "suggested_value": "",
+      "source": "cli@0x00431f50"
+    },
+    {
+      "node_path": "/sys/snmpd/cmviewname:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042d0a0"
+    },
+    {
+      "node_path": "/wireless/wepkey:%d/keylength",
+      "suggested_value": "",
+      "source": "cli@0x00411120"
+    },
+    {
+      "node_path": "/sys/snmpd/seculevel:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c358"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/endtime",
+      "suggested_value": "",
+      "source": "cli@0x00440fd4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%d/auth",
+      "suggested_value": "",
+      "source": "cli@0x00409ddc"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/web/priority",
+      "suggested_value": "",
+      "source": "cli@0x00447f18"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/ssid_index",
+      "suggested_value": "",
+      "source": "cli@0x004114f0"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:7/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00414c40"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:16/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043aac4"
+    },
+    {
+      "node_path": "/wlan/inf:1/rogue_ap/client/mrssi:%d",
+      "suggested_value": "",
+      "source": "cli@0x0040f4c0"
+    },
+    {
+      "node_path": "/sys/snmpd/hostip:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042ef8c"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/psmode",
+      "suggested_value": "",
+      "source": "cli@0x00411690"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wpa/radiussecret",
+      "suggested_value": "",
+      "source": "cli@0x004532f0"
+    },
+    {
+      "node_path": "/sys/autorf/enable",
+      "suggested_value": "",
+      "source": "cli@0x0042101c"
+    },
+    {
+      "node_path": "/wireless/defkey",
+      "suggested_value": "",
+      "source": "cli@0x00410e6c"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user4/priority",
+      "suggested_value": "",
+      "source": "cli@0x00446db0"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/mode",
+      "suggested_value": "",
+      "source": "cli@0x00411654"
+    },
+    {
+      "node_path": "/security/log/loglevel",
+      "suggested_value": "",
+      "source": "cli@0x0040d080"
+    },
+    {
+      "node_path": "/wlan/inf:1/autorekey/time",
+      "suggested_value": "",
+      "source": "cli@0x00442f84"
+    },
+    {
+      "node_path": "/wlan/inf:2/rogue_ap/client/mrssi:%d",
+      "suggested_value": "",
+      "source": "cli@0x0040fb7c"
+    },
+    {
+      "node_path": "/inet/entry:1/ipv6/valid",
+      "suggested_value": "",
+      "source": "cli@0x0043302c"
+    },
+    {
+      "node_path": "/captival/serial:%d/device",
+      "suggested_value": "",
+      "source": "cli@0x00459130"
+    },
+    {
+      "node_path": "/schedule/enable",
+      "suggested_value": "",
+      "source": "cli@0x00441774"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/group_id",
+      "suggested_value": "",
+      "source": "cli@0x00456ef4"
+    },
+    {
+      "node_path": "/sys/log/logserver",
+      "suggested_value": "",
+      "source": "cli@0x0040d01c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/e_partition",
+      "suggested_value": "",
+      "source": "cli@0x0041f3b4"
+    },
+    {
+      "node_path": "/lan/ethernet:2/vlan_id",
+      "suggested_value": "",
+      "source": "cli@0x0044f5cc"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/location",
+      "suggested_value": "",
+      "source": "cli@0x004392dc"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/arrayname",
+      "suggested_value": "",
+      "source": "cli@0x00438200"
+    },
+    {
+      "node_path": "/wlan/inf:1/macclone/addr",
+      "suggested_value": "",
+      "source": "cli@0x00450678"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/aparray_password",
+      "suggested_value": "",
+      "source": "cli@0x00439980"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:%d/ip",
+      "suggested_value": "",
+      "source": "cli@0x0043d708"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/timer",
+      "suggested_value": "",
+      "source": "cli@0x00438ab4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/wep_key",
+      "suggested_value": "",
+      "source": "cli@0x00424af4"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:1/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00414af0"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/username",
+      "suggested_value": "",
+      "source": "cli@0x0040d288"
+    },
+    {
+      "node_path": "/runtime/captival/byod/index:%d/os",
+      "suggested_value": "",
+      "source": "cli@0x00411c7c"
+    },
+    {
+      "node_path": "/tc_monitor/state",
+      "suggested_value": "",
+      "source": "cli@0x004516e0"
+    },
+    {
+      "node_path": "/sys/swcontroller/live_port",
+      "suggested_value": "",
+      "source": "cli@0x00456d34"
+    },
+    {
+      "node_path": "/captival/serial:%d",
+      "suggested_value": "",
+      "source": "cli@0x00458f00"
+    },
+    {
+      "node_path": "/sys/autorf/init/auto",
+      "suggested_value": "",
+      "source": "cli@0x00420ae4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/master_number",
+      "suggested_value": "",
+      "source": "cli@0x00439218"
+    },
+    {
+      "node_path": "/wlan/inf:1/zonedefence",
+      "suggested_value": "",
+      "source": "cli@0x0041e9d0"
+    },
+    {
+      "node_path": "/wlan/inf:1/wepkey:%d/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x00425fe0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wepkey:%d/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x00424a20"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/ssl",
+      "suggested_value": "",
+      "source": "cli@0x0040d120"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/mail/limit",
+      "suggested_value": "",
+      "source": "cli@0x00447d88"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:%d/hostname",
+      "suggested_value": "",
+      "source": "cli@0x0043c478"
+    },
+    {
+      "node_path": "/wlan/inf:",
+      "suggested_value": "",
+      "source": "cli@0x0043f734"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/location",
+      "suggested_value": "",
+      "source": "cli@0x00438334"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/mailserver",
+      "suggested_value": "",
+      "source": "cli@0x0040d1b0"
+    },
+    {
+      "node_path": "/runtime/update/fwimage/status",
+      "suggested_value": "",
+      "source": "cli@0x00413b34"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/discover_num",
+      "suggested_value": "",
+      "source": "cli@0x00438350"
+    },
+    {
+      "node_path": "/wlan/inf:%d/vlan_id",
+      "suggested_value": "",
+      "source": "cli@0x0044f7b0"
+    },
+    {
+      "node_path": "/runtime/wan/inf:1/gateway",
+      "suggested_value": "",
+      "source": "cli@0x00413a50"
+    },
+    {
+      "node_path": "/captival/ipfilter:%d/mask",
+      "suggested_value": "",
+      "source": "cli@0x0045875c"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:3/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00414b60"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:3/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a6d4"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:11/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a434"
+    },
+    {
+      "node_path": "/wlan/inf:%d/manrate1",
+      "suggested_value": "",
+      "source": "cli@0x004087e4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/ssid",
+      "suggested_value": "",
+      "source": "cli@0x00427b7c"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user3/priority",
+      "suggested_value": "",
+      "source": "cli@0x004470c8"
+    },
+    {
+      "node_path": "/captival/radius/auth_server_secret",
+      "suggested_value": "",
+      "source": "cli@0x00457414"
+    },
+    {
+      "node_path": "/temperature/area:%d/high",
+      "suggested_value": "",
+      "source": "cli@0x00413d04"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/aui/limit",
+      "suggested_value": "",
+      "source": "cli@0x00448148"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wds/list/index:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x0040a394"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/auth",
+      "suggested_value": "",
+      "source": "cli@0x00411a28"
+    },
+    {
+      "node_path": "/sys/stunnel/updatecert/enable",
+      "suggested_value": "",
+      "source": "cli@0x004091dc"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/auth",
+      "suggested_value": "",
+      "source": "cli@0x004115e4"
+    },
+    {
+      "node_path": "/captival/pop3/ssl_state",
+      "suggested_value": "",
+      "source": "cli@0x00457e44"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x004391e0"
+    },
+    {
+      "node_path": "/sys/swcontroller/group_id",
+      "suggested_value": "",
+      "source": "cli@0x00456d6c"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/mail/priority",
+      "suggested_value": "",
+      "source": "cli@0x00447d38"
+    },
+    {
+      "node_path": "/time/ntpserver/ip",
+      "suggested_value": "",
+      "source": "cli@0x0041ce88"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:14/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a338"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/slaver_number",
+      "suggested_value": "",
+      "source": "cli@0x00439a28"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/apscanlistinfo/apscan:%d/chan",
+      "suggested_value": "",
+      "source": "cli@0x0040f628"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/master_number",
+      "suggested_value": "",
+      "source": "cli@0x00438a44"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wepkey:%d",
+      "suggested_value": "",
+      "source": "cli@0x00424930"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/wirelesson",
+      "suggested_value": "",
+      "source": "cli@0x0044105c"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user4/limit",
+      "suggested_value": "",
+      "source": "cli@0x00446df8"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user4/endport",
+      "suggested_value": "",
+      "source": "cli@0x00446e98"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:2/apscanlistinfo/apscan:%02d/rssidbm",
+      "suggested_value": "",
+      "source": "cli@0x0040fe0c"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/wep_key",
+      "suggested_value": "",
+      "source": "cli@0x004261bc"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/wep_keyformat",
+      "suggested_value": "",
+      "source": "cli@0x00426200"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:24/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a824"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/backup_number",
+      "suggested_value": "",
+      "source": "cli@0x00439234"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:9/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a4dc"
+    },
+    {
+      "node_path": "/captival/radius/auth_server_port",
+      "suggested_value": "",
+      "source": "cli@0x004585d4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/discover_num",
+      "suggested_value": "",
+      "source": "cli@0x004392c0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/acktimeout_a",
+      "suggested_value": "",
+      "source": "cli@0x0041e580"
+    },
+    {
+      "node_path": "/wlan/inf:%d/acktimeout_g",
+      "suggested_value": "",
+      "source": "cli@0x0041e4a4"
+    },
+    {
+      "node_path": "/runtime/captival/byod/index:%d/model",
+      "suggested_value": "",
+      "source": "cli@0x0041185c"
+    },
+    {
+      "node_path": "/wlan/inf:1/autorekey/ssid/enable",
+      "suggested_value": "",
+      "source": "cli@0x00443b00"
+    },
+    {
+      "node_path": "/wlan/inf:%d/ethlink",
+      "suggested_value": "",
+      "source": "cli@0x0041f35c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x00409ca0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/dtim",
+      "suggested_value": "",
+      "source": "cli@0x0041ee60"
+    },
+    {
+      "node_path": "/runtime/sys/info/firmwareverreve",
+      "suggested_value": "",
+      "source": "cli@0x004093b4"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:6/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a5d8"
+    },
+    {
+      "node_path": "/runtime/stats/ethernet/rx/packets",
+      "suggested_value": "",
+      "source": "cli@0x0040e8e0"
+    },
+    {
+      "node_path": "/sys/log/smtpindex",
+      "suggested_value": "",
+      "source": "cli@0x0040d0d4"
+    },
+    {
+      "node_path": "/sys/loadbalance/threshold",
+      "suggested_value": "",
+      "source": "cli@0x0041f5c4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/discover_num",
+      "suggested_value": "",
+      "source": "cli@0x00439a98"
+    },
+    {
+      "node_path": "/sys/adminlimit/vlanid",
+      "suggested_value": "",
+      "source": "cli@0x004446d0"
+    },
+    {
+      "node_path": "/sys/log/timemail",
+      "suggested_value": "",
+      "source": "cli@0x0040d0c0"
+    },
+    {
+      "node_path": "/sys/swcontroller/server_ip",
+      "suggested_value": "",
+      "source": "cli@0x004597f0"
+    },
+    {
+      "node_path": "/sys/autorf/client/time/loop",
+      "suggested_value": "",
+      "source": "cli@0x00420c70"
+    },
+    {
+      "node_path": "/captival/user:%d/name",
+      "suggested_value": "",
+      "source": "cli@0x00457844"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:",
+      "suggested_value": "",
+      "source": "cli@0x00450284"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/starttime",
+      "suggested_value": "",
+      "source": "cli@0x00440f4c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:2/apscanlistinfo/apscan:%02d/rssi",
+      "suggested_value": "",
+      "source": "cli@0x0040fe54"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/allday",
+      "suggested_value": "",
+      "source": "cli@0x00440ea8"
+    },
+    {
+      "node_path": "/sys/snmpd/secumodel:1",
+      "suggested_value": "",
+      "source": "cli@0x004310e8"
+    },
+    {
+      "node_path": "/wlan/inf:1/autorekey/starttime",
+      "suggested_value": "",
+      "source": "cli@0x00442e48"
+    },
+    {
+      "node_path": "/wlan/inf:%d/enable",
+      "suggested_value": "",
+      "source": "cli@0x0041e6a4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wpa/grp_rekey_interval",
+      "suggested_value": "",
+      "source": "cli@0x0041d584"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x0043d598"
+    },
+    {
+      "node_path": "/sys/snmpd/commorun:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042efcc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wepkey:1/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x0040d910"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/aparray_password",
+      "suggested_value": "",
+      "source": "cli@0x00438214"
+    },
+    {
+      "node_path": "/captival/maintain_timeout",
+      "suggested_value": "",
+      "source": "cli@0x00457cac"
+    },
+    {
+      "node_path": "/sys/snmpd/mapgroup:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c984"
+    },
+    {
+      "node_path": "/wlan/inf:%d/captival/state",
+      "suggested_value": "",
+      "source": "cli@0x0045948c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/location",
+      "suggested_value": "",
+      "source": "cli@0x00439ab4"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user4/startport",
+      "suggested_value": "",
+      "source": "cli@0x00446e48"
+    },
+    {
+      "node_path": "/sys/snmpd/oid:%d",
+      "suggested_value": "",
+      "source": "cli@0x0043058c"
+    },
+    {
+      "node_path": "/runtime/captival/byod/index:%d/devicetype",
+      "suggested_value": "",
+      "source": "cli@0x00411c64"
+    },
+    {
+      "node_path": "/captival/radius/acct_server_ip",
+      "suggested_value": "",
+      "source": "cli@0x0045744c"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user2/limit",
+      "suggested_value": "",
+      "source": "cli@0x0044972c"
+    },
+    {
+      "node_path": "/time/syncwith",
+      "suggested_value": "",
+      "source": "cli@0x0041cd84"
+    },
+    {
+      "node_path": "/tc_monitor/mssid:%d/upratetype",
+      "suggested_value": "",
+      "source": "cli@0x004512e0"
+    },
+    {
+      "node_path": "/sys/swcontroller/group_name",
+      "suggested_value": "",
+      "source": "cli@0x00456da4"
+    },
+    {
+      "node_path": "/captival/ldap/auth",
+      "suggested_value": "",
+      "source": "cli@0x0045830c"
+    },
+    {
+      "node_path": "/wlan/inf:1/wepkey:%d",
+      "suggested_value": "",
+      "source": "cli@0x00425f98"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:2/apscanlistinfo/apscan:%d/chan",
+      "suggested_value": "",
+      "source": "cli@0x0040fbfc"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/role",
+      "suggested_value": "",
+      "source": "cli@0x00438a28"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user3/startport",
+      "suggested_value": "",
+      "source": "cli@0x00447160"
+    },
+    {
+      "node_path": "/wlan/inf:1/stpstats/enable",
+      "suggested_value": "",
+      "source": "cli@0x00408714"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x00411538"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/rssi",
+      "suggested_value": "",
+      "source": "cli@0x00411618"
+    },
+    {
+      "node_path": "/wan/rg/inf:1/static/gateway",
+      "suggested_value": "",
+      "source": "cli@0x00413a38"
+    },
+    {
+      "node_path": "/wlan/inf:%d/manretries",
+      "suggested_value": "",
+      "source": "cli@0x00418598"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:5/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043ae60"
+    },
+    {
+      "node_path": "/wlan/inf:%d/autorekey/ssid/enable",
+      "suggested_value": "",
+      "source": "cli@0x00443044"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%d/chan",
+      "suggested_value": "",
+      "source": "cli@0x00409bd4"
+    },
+    {
+      "node_path": "/wlan/inf:1/keylength",
+      "suggested_value": "",
+      "source": "cli@0x004260d8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/status",
+      "suggested_value": "",
+      "source": "cli@0x00427dec"
+    },
+    {
+      "node_path": "/captival/ldap/identity",
+      "suggested_value": "",
+      "source": "cli@0x00458058"
+    },
+    {
+      "node_path": "/runtime/func/static_dhcp",
+      "suggested_value": "",
+      "source": "cli@0x0043d808"
+    },
+    {
+      "node_path": "/wlan/inf:1/rtslength",
+      "suggested_value": "",
+      "source": "cli@0x0040f048"
+    },
+    {
+      "node_path": "/runtime/inet/entry:1/ipv6/gateway",
+      "suggested_value": "",
+      "source": "cli@0x004320b8"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/ath:",
+      "suggested_value": "",
+      "source": "cli@0x0044db30"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wds/index:",
+      "suggested_value": "",
+      "source": "cli@0x0044eae4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/wep_key_index",
+      "suggested_value": "",
+      "source": "cli@0x00424a8c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/discover_num",
+      "suggested_value": "",
+      "source": "cli@0x00438aec"
+    },
+    {
+      "node_path": "/wlan/inf:1/acl/mac:%d",
+      "suggested_value": "",
+      "source": "cli@0x00410bd8"
+    },
+    {
+      "node_path": "/wireless/multi/index:%d/wep_keylength",
+      "suggested_value": "",
+      "source": "cli@0x00411350"
+    },
+    {
+      "node_path": "/wlan/inf:%d/inact",
+      "suggested_value": "",
+      "source": "cli@0x00418430"
+    },
+    {
+      "node_path": "/sys/adminlimit/ipentry/index:%d/ippoolend",
+      "suggested_value": "",
+      "source": "cli@0x00444844"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/wep_keyformat",
+      "suggested_value": "",
+      "source": "cli@0x00424b40"
+    },
+    {
+      "node_path": "/captival/radius/acct_mode",
+      "suggested_value": "",
+      "source": "cli@0x00457434"
+    },
+    {
+      "node_path": "/sys/swcontroller/group_passwd",
+      "suggested_value": "",
+      "source": "cli@0x00456ddc"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/group_passwd",
+      "suggested_value": "",
+      "source": "cli@0x00456f64"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/arrayname",
+      "suggested_value": "",
+      "source": "cli@0x0043918c"
+    },
+    {
+      "node_path": "/time/daylightsaving",
+      "suggested_value": "",
+      "source": "cli@0x0040cabc"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:2/apscanlistinfo/apscan:%02d/ssid",
+      "suggested_value": "",
+      "source": "cli@0x0040fccc"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/rule/index:%d/uplink",
+      "suggested_value": "",
+      "source": "cli@0x004464d4"
+    },
+    {
+      "node_path": "/trafficctrl/updownlinkset/bandwidth/downlink",
+      "suggested_value": "",
+      "source": "cli@0x0044a050"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user1/endport",
+      "suggested_value": "",
+      "source": "cli@0x004477e0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/ip",
+      "suggested_value": "",
+      "source": "cli@0x00438238"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/wds:%d/client:%d/rssi",
+      "suggested_value": "",
+      "source": "cli@0x0040a168"
+    },
+    {
+      "node_path": "/wlan/inf:%d/ap_mode",
+      "suggested_value": "",
+      "source": "cli@0x0041d6d0"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/rule/index:",
+      "suggested_value": "",
+      "source": "cli@0x00446abc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/wep_keylength",
+      "suggested_value": "",
+      "source": "cli@0x00425850"
+    },
+    {
+      "node_path": "/lan/dhcp/server/force_bcast",
+      "suggested_value": "",
+      "source": "cli@0x00439e30"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:19/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a9c8"
+    },
+    {
+      "node_path": "/runtime/sys/autorf/init/button",
+      "suggested_value": "",
+      "source": "cli@0x00415df0"
+    },
+    {
+      "node_path": "/runtime/inet/entry:1/ipv6/dns",
+      "suggested_value": "",
+      "source": "cli@0x0043216c"
+    },
+    {
+      "node_path": "/captival/ldap/port",
+      "suggested_value": "",
+      "source": "cli@0x00458344"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/wep_keylength",
+      "suggested_value": "",
+      "source": "cli@0x00426244"
+    },
+    {
+      "node_path": "/sys/snmpd/groupname:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c338"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%d/rssi",
+      "suggested_value": "",
+      "source": "cli@0x00409d78"
+    },
+    {
+      "node_path": "/captival/serial:%d/end",
+      "suggested_value": "",
+      "source": "cli@0x0045910c"
+    },
+    {
+      "node_path": "/runtime/stats/ethernet/tx/bytes",
+      "suggested_value": "",
+      "source": "cli@0x0040e894"
+    },
+    {
+      "node_path": "/wlan/inf:1/rogue_ap/client:",
+      "suggested_value": "",
+      "source": "cli@0x0042083c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/channel",
+      "suggested_value": "",
+      "source": "cli@0x00427c18"
+    },
+    {
+      "node_path": "/wlan/inf:%d/autorekey/starttime",
+      "suggested_value": "",
+      "source": "cli@0x00443d88"
+    },
+    {
+      "node_path": "/sys/snmpd/secuname:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c968"
+    },
+    {
+      "node_path": "/captival/ipfilter:%d/ip",
+      "suggested_value": "",
+      "source": "cli@0x0045870c"
+    },
+    {
+      "node_path": "/sys/snmpd/cmtype:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042d0c4"
+    },
+    {
+      "node_path": "/sys/snmpd/viewname:1",
+      "suggested_value": "",
+      "source": "cli@0x0042a994"
+    },
+    {
+      "node_path": "/tc_monitor/uplink",
+      "suggested_value": "",
+      "source": "cli@0x00451344"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/role",
+      "suggested_value": "",
+      "source": "cli@0x00438270"
+    },
+    {
+      "node_path": "/wlan/inf:%d/aclbywlmode",
+      "suggested_value": "",
+      "source": "cli@0x00417c4c"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/wep_key_index",
+      "suggested_value": "",
+      "source": "cli@0x00426158"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/apscanlistinfo/apscan:%02d/ssid",
+      "suggested_value": "",
+      "source": "cli@0x0040f74c"
+    },
+    {
+      "node_path": "/runtime/stats/ethernet/tx/packets",
+      "suggested_value": "",
+      "source": "cli@0x0040e92c"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:13/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043abc0"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user2/startport",
+      "suggested_value": "",
+      "source": "cli@0x004497ac"
+    },
+    {
+      "node_path": "/wlan/inf:1/uapsd",
+      "suggested_value": "",
+      "source": "cli@0x00418fc8"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/arrayname",
+      "suggested_value": "",
+      "source": "cli@0x00439964"
+    },
+    {
+      "node_path": "/sys/next_ccode",
+      "suggested_value": "",
+      "source": "cli@0x0041d7bc"
+    },
+    {
+      "node_path": "/wireless/multi/index:%d/wep_keyformat",
+      "suggested_value": "",
+      "source": "cli@0x004112d0"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/fromemail",
+      "suggested_value": "",
+      "source": "cli@0x0040d1f8"
+    },
+    {
+      "node_path": "/wlan/inf:1/rogue_ap/client/arssix:%d",
+      "suggested_value": "",
+      "source": "cli@0x0040f584"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/ath:17/egress",
+      "suggested_value": "",
+      "source": "cli@0x0044da70"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/rogue_ap_scan/client:%02d/mac",
+      "suggested_value": "",
+      "source": "cli@0x0040f7ec"
+    },
+    {
+      "node_path": "/captival/ldap/name",
+      "suggested_value": "",
+      "source": "cli@0x00457ff0"
+    },
+    {
+      "node_path": "/temperature/area:%d/low",
+      "suggested_value": "",
+      "source": "cli@0x00413c94"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:25/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a7d0"
+    },
+    {
+      "node_path": "/sys/snmpd/privkey:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c9f4"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/wds:%d/client:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x0040a0a4"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/enable",
+      "suggested_value": "",
+      "source": "cli@0x00456e14"
+    },
+    {
+      "node_path": "/captival/serial:1",
+      "suggested_value": "",
+      "source": "cli@0x00458d94"
+    },
+    {
+      "node_path": "/runtime/sys/swcontroller/auth_response",
+      "suggested_value": "",
+      "source": "cli@0x00459998"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:4/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00414b98"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wepkey:2/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x0040d920"
+    },
+    {
+      "node_path": "/sys/snmpd/status",
+      "suggested_value": "",
+      "source": "cli@0x0042ec14"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wpa/b_acctsecret",
+      "suggested_value": "",
+      "source": "cli@0x00454c68"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x00438254"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/timer",
+      "suggested_value": "",
+      "source": "cli@0x00439a60"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x004119cc"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/auth",
+      "suggested_value": "",
+      "source": "cli@0x00411a84"
+    },
+    {
+      "node_path": "/wlan/inf:%d/authentication",
+      "suggested_value": "",
+      "source": "cli@0x0040de78"
+    },
+    {
+      "node_path": "/wlan/inf:%d/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00412e24"
+    },
+    {
+      "node_path": "/runtime/wireless/setting/status",
+      "suggested_value": "",
+      "source": "cli@0x0040ed9c"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/time",
+      "suggested_value": "",
+      "source": "cli@0x004114a4"
+    },
+    {
+      "node_path": "/wlan/inf:1/wepkey:%d/keylength",
+      "suggested_value": "",
+      "source": "cli@0x00426024"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/rule/index:%d/clientmac",
+      "suggested_value": "",
+      "source": "cli@0x0044644c"
+    },
+    {
+      "node_path": "/dnsrelay/server/primarydns",
+      "suggested_value": "",
+      "source": "cli@0x00413790"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x00427ae0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wepkey:4/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x0040d904"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x004399b8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/defkey",
+      "suggested_value": "",
+      "source": "cli@0x00424978"
+    },
+    {
+      "node_path": "/wlan/inf:1/multicast_bw_rate",
+      "suggested_value": "",
+      "source": "cli@0x00412bc8"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/other/priority",
+      "suggested_value": "",
+      "source": "cli@0x00449e14"
+    },
+    {
+      "node_path": "/wlan/inf:%d/zonedefence_ip/ipaddr:%d",
+      "suggested_value": "",
+      "source": "cli@0x0043fa7c"
+    },
+    {
+      "node_path": "/runtime/sys/uptime",
+      "suggested_value": "",
+      "source": "cli@0x0040c960"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/live_port",
+      "suggested_value": "",
+      "source": "cli@0x00456ebc"
+    },
+    {
+      "node_path": "/lan/dhcp/server/force_ucast",
+      "suggested_value": "",
+      "source": "cli@0x0043cfe8"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/channel",
+      "suggested_value": "",
+      "source": "cli@0x0040eecc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/autorekey/startweek",
+      "suggested_value": "",
+      "source": "cli@0x00443d18"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/type",
+      "suggested_value": "",
+      "source": "cli@0x0041019c"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:7/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043adb8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/igmpsnoop",
+      "suggested_value": "",
+      "source": "cli@0x004507b8"
+    },
+    {
+      "node_path": "/sys/autorf/server/thresold/miss",
+      "suggested_value": "",
+      "source": "cli@0x00420d9c"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:15/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a2e4"
+    },
+    {
+      "node_path": "/tc_monitor/downlink",
+      "suggested_value": "",
+      "source": "cli@0x00451080"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/tx_byte",
+      "suggested_value": "",
+      "source": "cli@0x00411bbc"
+    },
+    {
+      "node_path": "/wireless/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x00410eec"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/mailport",
+      "suggested_value": "",
+      "source": "cli@0x0040d318"
+    },
+    {
+      "node_path": "/runtime/captival/byod/index:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x00411c2c"
+    },
+    {
+      "node_path": "/aparray/sync/band",
+      "suggested_value": "",
+      "source": "cli@0x00437878"
+    },
+    {
+      "node_path": "/wlan/inf:1/autorekey/startweek",
+      "suggested_value": "",
+      "source": "cli@0x00442d0c"
+    },
+    {
+      "node_path": "/wlan/inf:1/aparray_enable",
+      "suggested_value": "",
+      "source": "cli@0x0043777c"
+    },
+    {
+      "node_path": "/rumtime/wlan/inf:1/autorekey/first",
+      "suggested_value": "",
+      "source": "cli@0x00423050"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:23/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a044"
+    },
+    {
+      "node_path": "/sys/snmpd/rwcomm",
+      "suggested_value": "",
+      "source": "cli@0x0042e684"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/rule/index:%d/clientip",
+      "suggested_value": "",
+      "source": "cli@0x00446408"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/captival/state",
+      "suggested_value": "",
+      "source": "cli@0x004594d0"
+    },
+    {
+      "node_path": "/trafficctrl/updownlinkset/bandwidth/uplink",
+      "suggested_value": "",
+      "source": "cli@0x00448304"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/apscanlistinfo/apscan:%02d/rssidbm",
+      "suggested_value": "",
+      "source": "cli@0x0040f888"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/rx_byte",
+      "suggested_value": "",
+      "source": "cli@0x004116cc"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:4/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043aeb4"
+    },
+    {
+      "node_path": "/tc_monitor/mssid:%d/uprate",
+      "suggested_value": "",
+      "source": "cli@0x004512d4"
+    },
+    {
+      "node_path": "/runtime/sys/aparray/server_ip",
+      "suggested_value": "",
+      "source": "cli@0x00456b0c"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:12/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a3e0"
+    },
+    {
+      "node_path": "/wlan/inf:1/multicast_bwctrl",
+      "suggested_value": "",
+      "source": "cli@0x0041dfa8"
+    },
+    {
+      "node_path": "/wlan/inf:1/dfstest",
+      "suggested_value": "",
+      "source": "cli@0x0041ed94"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wpa/wpapsk",
+      "suggested_value": "",
+      "source": "cli@0x004430d8"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/pass1",
+      "suggested_value": "",
+      "source": "cli@0x0040d2d0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/ratectl",
+      "suggested_value": "",
+      "source": "cli@0x00418da0"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:18/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043aa1c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/rssi",
+      "suggested_value": "",
+      "source": "cli@0x00410438"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user3/limit",
+      "suggested_value": "",
+      "source": "cli@0x00447110"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/enable",
+      "suggested_value": "",
+      "source": "cli@0x00441648"
+    },
+    {
+      "node_path": "/wlan/inf:%d/updownlink",
+      "suggested_value": "",
+      "source": "cli@0x00446634"
+    },
+    {
+      "node_path": "/sys/group_vlan/index:%d/eth:2/egress",
+      "suggested_value": "",
+      "source": "cli@0x0044d9c0"
+    },
+    {
+      "node_path": "/sys/snmpd/viewname:%d",
+      "suggested_value": "",
+      "source": "cli@0x00430570"
+    },
+    {
+      "node_path": "/wlan/inf:%d/autochannel",
+      "suggested_value": "",
+      "source": "cli@0x00413574"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:5/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00414bd0"
+    },
+    {
+      "node_path": "/captival/serial:%d/duration",
+      "suggested_value": "",
+      "source": "cli@0x004590f0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wlan_bytes_lim",
+      "suggested_value": "",
+      "source": "cli@0x004125f4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/assoc_limit/enable",
+      "suggested_value": "",
+      "source": "cli@0x0040cd04"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user1/startport",
+      "suggested_value": "",
+      "source": "cli@0x00447790"
+    },
+    {
+      "node_path": "/sys/snmpd/community:1",
+      "suggested_value": "",
+      "source": "cli@0x0042b540"
+    },
+    {
+      "node_path": "/captival/ldap/base",
+      "suggested_value": "",
+      "source": "cli@0x00457fd0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/nss",
+      "suggested_value": "",
+      "source": "cli@0x00418ab8"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/autorekey/enable",
+      "suggested_value": "",
+      "source": "cli@0x00443ac4"
+    },
+    {
+      "node_path": "/wlan/inf:1/fraglength",
+      "suggested_value": "",
+      "source": "cli@0x0041e314"
+    },
+    {
+      "node_path": "/wlan/inf:1/macclone/type",
+      "suggested_value": "",
+      "source": "cli@0x004506f0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/cwmmode",
+      "suggested_value": "",
+      "source": "cli@0x0041e7bc"
+    },
+    {
+      "node_path": "/wireless/wepkey:%d/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x004110a0"
+    },
+    {
+      "node_path": "/runtime/bootver/buildtime",
+      "suggested_value": "",
+      "source": "cli@0x004084e0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/scan_table/index:%d/master_number",
+      "suggested_value": "",
+      "source": "cli@0x0043828c"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/user1/limit",
+      "suggested_value": "",
+      "source": "cli@0x00447740"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/backup_number",
+      "suggested_value": "",
+      "source": "cli@0x00439a0c"
+    },
+    {
+      "node_path": "/sys/adminlimit/ipentry/index:%d/ippoolstart",
+      "suggested_value": "",
+      "source": "cli@0x004447f0"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:%d/d_wepkeylen",
+      "suggested_value": "",
+      "source": "cli@0x00451f84"
+    },
+    {
+      "node_path": "/sys/swcontroller/interval",
+      "suggested_value": "",
+      "source": "cli@0x00459a74"
+    },
+    {
+      "node_path": "/runtime/stats/ethernet/rx/drop",
+      "suggested_value": "",
+      "source": "cli@0x0040e978"
+    },
+    {
+      "node_path": "/wlan/inf:%d/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x004249cc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/autorekey/time",
+      "suggested_value": "",
+      "source": "cli@0x00443ca8"
+    },
+    {
+      "node_path": "/runtime/sys/aparray/server_port",
+      "suggested_value": "",
+      "source": "cli@0x00456b44"
+    },
+    {
+      "node_path": "/runtime/sys/swcontroller/beacon_timestamp",
+      "suggested_value": "",
+      "source": "cli@0x0045993c"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/mssid:%d/client:%d/mode",
+      "suggested_value": "",
+      "source": "cli@0x00411afc"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/leasetime",
+      "suggested_value": "",
+      "source": "cli@0x0043dfc0"
+    },
+    {
+      "node_path": "/lan/dhcp/server/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043dec4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wds/list/index:",
+      "suggested_value": "",
+      "source": "cli@0x0044a740"
+    },
+    {
+      "node_path": "/runtime/sys/aparray/auth",
+      "suggested_value": "",
+      "source": "cli@0x00456b7c"
+    },
+    {
+      "node_path": "/sys/stunnel/enable",
+      "suggested_value": "",
+      "source": "cli@0x004287e4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/aclallbywlmode",
+      "suggested_value": "",
+      "source": "cli@0x004075b4"
+    },
+    {
+      "node_path": "/tc_monitor/mssid:%d/state",
+      "suggested_value": "",
+      "source": "cli@0x004515e0"
+    },
+    {
+      "node_path": "/runtime/stats/ethernet/tx/drop",
+      "suggested_value": "",
+      "source": "cli@0x0040e9c4"
+    },
+    {
+      "node_path": "/wlan/inf:1/rogue_ap/client/noisefloor:%02d",
+      "suggested_value": "",
+      "source": "cli@0x0040facc"
+    },
+    {
+      "node_path": "/wlan/inf:2/rogue_ap/client/mrssidbm:%02d",
+      "suggested_value": "",
+      "source": "cli@0x0040fb44"
+    },
+    {
+      "node_path": "/sys/snmpd/authkey:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c9bc"
+    },
+    {
+      "node_path": "/captival/pop3/server_port",
+      "suggested_value": "",
+      "source": "cli@0x00457e7c"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/slaver_number",
+      "suggested_value": "",
+      "source": "cli@0x00438a7c"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/web/limit",
+      "suggested_value": "",
+      "source": "cli@0x00447f68"
+    },
+    {
+      "node_path": "/captival/serial:%d/number",
+      "suggested_value": "",
+      "source": "cli@0x004590d4"
+    },
+    {
+      "node_path": "/wlan/inf:1/ratectl",
+      "suggested_value": "",
+      "source": "cli@0x004185dc"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/client:%d/tx_byte",
+      "suggested_value": "",
+      "source": "cli@0x00411708"
+    },
+    {
+      "node_path": "/sys/snmpd/rocomm",
+      "suggested_value": "",
+      "source": "cli@0x0042eb10"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/apscanlistinfo/apscan/ap_index:%02d",
+      "suggested_value": "",
+      "source": "cli@0x0040f5e4"
+    },
+    {
+      "node_path": "/runtime/sys/swcontroller/active",
+      "suggested_value": "",
+      "source": "cli@0x0045992c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/zonedefence_ip/ipv6addr:%d",
+      "suggested_value": "",
+      "source": "cli@0x004407d8"
+    },
+    {
+      "node_path": "/wlan/inf:%d/assoc_limit/number",
+      "suggested_value": "",
+      "source": "cli@0x0041d004"
+    },
+    {
+      "node_path": "/trafficctrl/trafficmgr/rule/index:%d/name",
+      "suggested_value": "",
+      "source": "cli@0x004463cc"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/mac",
+      "suggested_value": "",
+      "source": "cli@0x00438a0c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wepkey:3/keyformat",
+      "suggested_value": "",
+      "source": "cli@0x0040d930"
+    },
+    {
+      "node_path": "/sys/aparray/loadbalance/enable",
+      "suggested_value": "",
+      "source": "cli@0x0041f6bc"
+    },
+    {
+      "node_path": "/arpspoofing/static/index:%d/ip",
+      "suggested_value": "",
+      "source": "cli@0x00444194"
+    },
+    {
+      "node_path": "/wlan/inf:1/rogue_ap/client/mrssidbm:%02d",
+      "suggested_value": "",
+      "source": "cli@0x0040f488"
+    },
+    {
+      "node_path": "/arpspoofing/static",
+      "suggested_value": "",
+      "source": "cli@0x00443ea0"
+    },
+    {
+      "node_path": "/captival/radius/auth_server_ip",
+      "suggested_value": "",
+      "source": "cli@0x004585ec"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wepkey:%d/keylength",
+      "suggested_value": "",
+      "source": "cli@0x00425730"
+    },
+    {
+      "node_path": "/runtime/sys/swcontroller/last_response",
+      "suggested_value": "",
+      "source": "cli@0x0045994c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/agbyrssiordrstatus",
+      "suggested_value": "",
+      "source": "cli@0x004177ec"
+    },
+    {
+      "node_path": "/sys/snmpd/secuname:1",
+      "suggested_value": "",
+      "source": "cli@0x00430744"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arrayslaver/list/index:%d/master_number",
+      "suggested_value": "",
+      "source": "cli@0x004399f0"
+    },
+    {
+      "node_path": "/sys/snmpd/authprotocol:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042c9a0"
+    },
+    {
+      "node_path": "/wireless/multi/index:%d/wep_key",
+      "suggested_value": "",
+      "source": "cli@0x00411250"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/whosetdomain",
+      "suggested_value": "",
+      "source": "cli@0x00439f48"
+    },
+    {
+      "node_path": "/wireless/multi/index:%d/wep_key_index",
+      "suggested_value": "",
+      "source": "cli@0x004111d0"
+    },
+    {
+      "node_path": "/sys/snmpd/viewtype:%d",
+      "suggested_value": "",
+      "source": "cli@0x00430598"
+    },
+    {
+      "node_path": "/wlan/inf:1/rogue_ap/client/arssipri:%d",
+      "suggested_value": "",
+      "source": "cli@0x0040fa6c"
+    },
+    {
+      "node_path": "/wlan/inf:%d/wpa/acctsecret",
+      "suggested_value": "",
+      "source": "cli@0x00454f3c"
+    },
+    {
+      "node_path": "/sys/log/smtp/index:%d/toemail",
+      "suggested_value": "",
+      "source": "cli@0x0040d240"
+    },
+    {
+      "node_path": "/wlan/inf:%d/pri_bit",
+      "suggested_value": "",
+      "source": "cli@0x0041c6b0"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:%d/wds:%d/client:%d/time",
+      "suggested_value": "",
+      "source": "cli@0x0040a00c"
+    },
+    {
+      "node_path": "/runtime/stats/ethernet/rx/bytes",
+      "suggested_value": "",
+      "source": "cli@0x0040e848"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/arraymaster/list/index:%d/ip",
+      "suggested_value": "",
+      "source": "cli@0x004391c4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/aparray_password",
+      "suggested_value": "",
+      "source": "cli@0x004389d4"
+    },
+    {
+      "node_path": "/schedule/rule/index:%d/ssidnum",
+      "suggested_value": "",
+      "source": "cli@0x00441dc0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/wdslistinfo/wdsscan:%d/wdsmode",
+      "suggested_value": "",
+      "source": "cli@0x00409e40"
+    },
+    {
+      "node_path": "/wlan/inf:1/aparray_password",
+      "suggested_value": "",
+      "source": "cli@0x004355b0"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:1/ap_array_members/list/index:%d/location",
+      "suggested_value": "",
+      "source": "cli@0x00438b08"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:2/w_partition",
+      "suggested_value": "",
+      "source": "cli@0x00414b28"
+    },
+    {
+      "node_path": "/lan/dhcp/server/pool:1/staticdhcp/entry:20/enable",
+      "suggested_value": "",
+      "source": "cli@0x0043a140"
+    },
+    {
+      "node_path": "/sys/autorf/init/period",
+      "suggested_value": "",
+      "source": "cli@0x00420b40"
+    },
+    {
+      "node_path": "/wlan/inf:1/rogue_ap/client/arssi:%d",
+      "suggested_value": "",
+      "source": "cli@0x0040f518"
+    },
+    {
+      "node_path": "/wlan/inf:1/arrayname",
+      "suggested_value": "",
+      "source": "cli@0x0043569c"
+    },
+    {
+      "node_path": "/captival/radius/acct_server_secret",
+      "suggested_value": "",
+      "source": "cli@0x00457484"
+    },
+    {
+      "node_path": "/runtime/sys/info/firmwarebuildno",
+      "suggested_value": "",
+      "source": "cli@0x004093e4"
+    },
+    {
+      "node_path": "/runtime/wlan/inf:%d/rogue_ap/client:%d/time",
+      "suggested_value": "",
+      "source": "cli@0x00427d50"
+    },
+    {
+      "node_path": "/sys/snmpd/community:%d",
+      "suggested_value": "",
+      "source": "cli@0x0042e5d8"
+    },
+    {
+      "node_path": "/trafficctrl/qos/protocol/ftp/limit",
+      "suggested_value": "",
+      "source": "cli@0x004492fc"
+    },
+    {
+      "node_path": "/sys/dhcp_mc2uc",
+      "suggested_value": "",
+      "source": "cli@0x00408a48"
+    },
+    {
+      "node_path": "/aparray/sync/adminlimit",
+      "suggested_value": "",
+      "source": "cli@0x00435e2c"
+    },
+    {
+      "node_path": "/runtime/sys/info/firmwarebuildate",
+      "suggested_value": "",
+      "source": "cli@0x00409414"
+    }
+  ]
+}

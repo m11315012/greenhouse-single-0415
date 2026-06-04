@@ -1,0 +1,133 @@
+{
+  "firmware_id": "_DAP2310B-firmware-v210-rc036.bin.extracted",
+  "patch_hints": [
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/sbin/athstats",
+      "loop_head": "0x00406de8",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/captival_tar",
+      "loop_head": "0x004055b8",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/charconv",
+      "loop_head": "0x004013e8",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/sbin/wlanconfig",
+      "loop_head": "0x00407338",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/rgbin",
+      "loop_head": "0x004187a8",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/ethlink",
+      "loop_head": "0x00400e28",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/trap_monitor",
+      "loop_head": "0x00401768",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/xmldb",
+      "loop_head": "0x004028bc",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/servd",
+      "loop_head": "0x0041d014",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/servd_ctrl_usock)",
+      "description": "polling for servd socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/statistic",
+      "loop_head": "0x00403a28",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/static_dhcp",
+      "loop_head": "0x004015f8",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/bin/busybox",
+      "loop_head": "0x00413b2c",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/sbin/iwlist",
+      "loop_head": "0x0040fe48",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/fresetd",
+      "loop_head": "0x00404c18",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/fresetd",
+      "loop_head": "0x00402c94",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/fresetd_unixsock)",
+      "description": "polling for fresetd socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/cli",
+      "loop_head": "0x004302d0",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    }
+  ]
+}

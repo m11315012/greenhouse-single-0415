@@ -1,0 +1,10 @@
+{
+  "firmware_id": "_DAP3662-firmware-v105-rc047.bin.extracted",
+  "web_binaries": [
+    {
+      "binary_path": "/sbin/httpd",
+      "evidence": "binary name matches known HTTP server list: httpd",
+      "confidence": "high"
+    }
+  ]
+}

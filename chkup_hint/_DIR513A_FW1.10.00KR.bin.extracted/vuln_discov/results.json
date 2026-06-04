@@ -1,0 +1,85 @@
+{
+    "Proper": [
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "SHA256_Update",
+            "Function Name": "SHA256_Update",
+            "Verification Method": "Protected",
+            "Category": "Proper_Integrity"
+        },
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "EVP_DigestUpdate",
+            "Function Name": "EVP_DigestUpdate",
+            "Verification Method": "Protected",
+            "Category": "Proper_Integrity"
+        },
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "verify_update_3g_package",
+            "Function Name": "verify_update_3g_package",
+            "Verification Method": "Protected",
+            "Category": "Proper_Integrity"
+        },
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "RSA_verify",
+            "Function Name": "RSA_verify",
+            "Verification Method": "Protected",
+            "Category": "Proper_Authenticity"
+        }
+    ],
+    "Improper": [
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "MD5_Update",
+            "Function Name": "MD5_Update",
+            "Verification Method": "Protected",
+            "Category": "Improper_Integrity"
+        },
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "HMAC_Update",
+            "Function Name": "HMAC_Update",
+            "Verification Method": "Protected",
+            "Category": "Improper_Authenticity"
+        },
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "SHA1_Update",
+            "Function Name": "SHA1_Update",
+            "Verification Method": "Protected",
+            "Category": "Improper_Integrity"
+        },
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "FUN_0040c6a0",
+            "Function Name": "FUN_0040c6a0",
+            "Verification Method": "Protected",
+            "Category": "Improper_Authenticity"
+        },
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/output/DIR513A_FW1.10.00KR.bin_extracted/_DIR513A_FW1.10.00KR.bin.extracted/_40.extracted/_3A8000.extracted/cpio-root/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+            "Function Address": "FUN_0040db08",
+            "Function Name": "FUN_0040db08",
+            "Verification Method": "Protected",
+            "Category": "Improper_Integrity"
+        }
+    ],
+    "Missing": [
+        {
+            "Program": null,
+            "Function Address": null,
+            "Function Name": null,
+            "Verification Method": null,
+            "Category": "Missing_Freshness"
+        },
+        {
+            "Program": null,
+            "Function Address": null,
+            "Function Name": null,
+            "Verification Method": null,
+            "Category": "Missing_Compatibility"
+        }
+    ]
+}

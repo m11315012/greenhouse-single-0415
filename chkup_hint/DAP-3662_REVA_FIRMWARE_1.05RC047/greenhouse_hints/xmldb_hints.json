@@ -1,0 +1,420 @@
+{
+  "firmware_id": "_DAP3662-firmware-v105-rc047.bin.extracted",
+  "xmldb_node_paths": [
+    {
+      "node_path": "/captival/mtd/html/size",
+      "suggested_value": "",
+      "source": "httpd@0x00419e54"
+    },
+    {
+      "node_path": "/wan/rg/inf:1/static/ip",
+      "suggested_value": "",
+      "source": "httpd@0x0040ea94"
+    },
+    {
+      "node_path": "/sys/snmpd/privkey:1",
+      "suggested_value": "",
+      "source": "httpd@0x00418280"
+    },
+    {
+      "node_path": "/sys/snmpd/rwcomm",
+      "suggested_value": "",
+      "source": "httpd@0x0041773c"
+    },
+    {
+      "node_path": "/runtime/wireless/aclpath",
+      "suggested_value": "",
+      "source": "httpd@0x0041b418"
+    },
+    {
+      "node_path": "/sys/snmptrap/status",
+      "suggested_value": "",
+      "source": "httpd@0x00424780"
+    },
+    {
+      "node_path": "/captival/mtd/block_num",
+      "suggested_value": "",
+      "source": "httpd@0x00419a20"
+    },
+    {
+      "node_path": "/wlan/inf:1/assoc_limit/number",
+      "suggested_value": "",
+      "source": "httpd@0x00423258"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/ftp_port",
+      "suggested_value": "",
+      "source": "httpd@0x004179ac"
+    },
+    {
+      "node_path": "/sys/snmpd/commorun:",
+      "suggested_value": "",
+      "source": "httpd@0x004225e4"
+    },
+    {
+      "node_path": "/sys/snmpd/notifyview:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417f08"
+    },
+    {
+      "node_path": "/sys/swcontroller/service_port",
+      "suggested_value": "",
+      "source": "httpd@0x004177d8"
+    },
+    {
+      "node_path": "/runtime/sys/web/login/check",
+      "suggested_value": "",
+      "source": "httpd@0x0040ec40"
+    },
+    {
+      "node_path": "/captival/mtd/picture/name",
+      "suggested_value": "",
+      "source": "httpd@0x00419cc8"
+    },
+    {
+      "node_path": "/sys/snmpd/groupname:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417cb8"
+    },
+    {
+      "node_path": "/sys/snmpd/writeview:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417e74"
+    },
+    {
+      "node_path": "/captival/mtd/tar/index:%d/name",
+      "suggested_value": "",
+      "source": "httpd@0x00418af8"
+    },
+    {
+      "node_path": "/runtime/web/redirect_next_page",
+      "suggested_value": "",
+      "source": "httpd@0x004192fc"
+    },
+    {
+      "node_path": "/wan/rg/inf:1/dhcp/sys/hostname",
+      "suggested_value": "",
+      "source": "httpd@0x0040eac4"
+    },
+    {
+      "node_path": "/sys/swcontroller/live_port",
+      "suggested_value": "",
+      "source": "httpd@0x00417604"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/channel",
+      "suggested_value": "",
+      "source": "httpd@0x00423310"
+    },
+    {
+      "node_path": "/runtime/captival/ssid:%d/ipfilter/index:%d/mask",
+      "suggested_value": "",
+      "source": "httpd@0x00418ed8"
+    },
+    {
+      "node_path": "/wlan/inf:1/channel",
+      "suggested_value": "",
+      "source": "httpd@0x00422fb4"
+    },
+    {
+      "node_path": "/captival/mtd/tar/remains",
+      "suggested_value": "",
+      "source": "httpd@0x00418a68"
+    },
+    {
+      "node_path": "/runtime/captival/ssid:%d/white_list/index:%d/mac",
+      "suggested_value": "",
+      "source": "httpd@0x004195f4"
+    },
+    {
+      "node_path": "/captival/mtd/html/offset",
+      "suggested_value": "",
+      "source": "httpd@0x00419e08"
+    },
+    {
+      "node_path": "/captival/mtd/picture/offset",
+      "suggested_value": "",
+      "source": "httpd@0x00419a54"
+    },
+    {
+      "node_path": "/runtime/wan/inf:1/mac",
+      "suggested_value": "",
+      "source": "httpd@0x0042250c"
+    },
+    {
+      "node_path": "/sys/snmpd/privprotocol:1",
+      "suggested_value": "",
+      "source": "httpd@0x004181ec"
+    },
+    {
+      "node_path": "/captival/mtd/tar/offset",
+      "suggested_value": "",
+      "source": "httpd@0x00418688"
+    },
+    {
+      "node_path": "/sys/swcontroller/group_passwd",
+      "suggested_value": "",
+      "source": "httpd@0x004176a0"
+    },
+    {
+      "node_path": "/captival/mtd/picture/state",
+      "suggested_value": "",
+      "source": "httpd@0x00419cb4"
+    },
+    {
+      "node_path": "/sys/mac_acl:%d/total_num",
+      "suggested_value": "",
+      "source": "httpd@0x0041af78"
+    },
+    {
+      "node_path": "/sys/b_swcontroller/server_ip",
+      "suggested_value": "",
+      "source": "httpd@0x00417910"
+    },
+    {
+      "node_path": "/sys/snmpd/oid:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417b80"
+    },
+    {
+      "node_path": "/captival/mtd/html/state",
+      "suggested_value": "",
+      "source": "httpd@0x0041a04c"
+    },
+    {
+      "node_path": "/runtime/sys/info/firmwareversion",
+      "suggested_value": "",
+      "source": "httpd@0x00422eb0"
+    },
+    {
+      "node_path": "/captival/mtd/picture/size",
+      "suggested_value": "",
+      "source": "httpd@0x00419aa0"
+    },
+    {
+      "node_path": "/runtime/captival/ssid:%d/white_list",
+      "suggested_value": "",
+      "source": "httpd@0x00419818"
+    },
+    {
+      "node_path": "/wlan/inf:2/multi/index:%d/acl",
+      "suggested_value": "",
+      "source": "httpd@0x0041a1e0"
+    },
+    {
+      "node_path": "/sys/snmpd/rocomm",
+      "suggested_value": "",
+      "source": "httpd@0x00417568"
+    },
+    {
+      "node_path": "/wlan/inf:1/apmonitor",
+      "suggested_value": "",
+      "source": "httpd@0x00422e4c"
+    },
+    {
+      "node_path": "/sys/snmpd/readview:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417de0"
+    },
+    {
+      "node_path": "/runtime/sys/web/login/check_num",
+      "suggested_value": "",
+      "source": "httpd@0x0040ebf4"
+    },
+    {
+      "node_path": "/wlan/inf:%d/ssid",
+      "suggested_value": "",
+      "source": "httpd@0x004234a8"
+    },
+    {
+      "node_path": "/sys/swcontroller/group_id",
+      "suggested_value": "",
+      "source": "httpd@0x00417430"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:2/dfschannelchange",
+      "suggested_value": "",
+      "source": "httpd@0x0042408c"
+    },
+    {
+      "node_path": "/sys/swcontroller/enable",
+      "suggested_value": "",
+      "source": "httpd@0x00418350"
+    },
+    {
+      "node_path": "/runtime/mem/status/alluser_utilize",
+      "suggested_value": "",
+      "source": "httpd@0x00422da4"
+    },
+    {
+      "node_path": "/runtime/captival/ssid:%d/ipfilter/index:%d/ip",
+      "suggested_value": "",
+      "source": "httpd@0x00418e80"
+    },
+    {
+      "node_path": "/sys/snmpd/secuname:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417f9c"
+    },
+    {
+      "node_path": "/sys/snmpd/authprotocol:1",
+      "suggested_value": "",
+      "source": "httpd@0x004180c4"
+    },
+    {
+      "node_path": "/sys/snmpd/viewname:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417ae4"
+    },
+    {
+      "node_path": "/captival/mtd/html/name",
+      "suggested_value": "",
+      "source": "httpd@0x0041a060"
+    },
+    {
+      "node_path": "/wlan/inf:%d/multi/index:",
+      "suggested_value": "",
+      "source": "httpd@0x0041a708"
+    },
+    {
+      "node_path": "/wlan/inf:1/acl",
+      "suggested_value": "",
+      "source": "httpd@0x0041b444"
+    },
+    {
+      "node_path": "/sys/snmpd/viewtype:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417c1c"
+    },
+    {
+      "node_path": "/runtime/stunnel/clientip",
+      "suggested_value": "",
+      "source": "httpd@0x0040eb24"
+    },
+    {
+      "node_path": "/runtime/cpu/status/alluser_utilize",
+      "suggested_value": "",
+      "source": "httpd@0x00422d58"
+    },
+    {
+      "node_path": "/runtime/captival/ssid:%d/ipfilter",
+      "suggested_value": "",
+      "source": "httpd@0x004191b8"
+    },
+    {
+      "node_path": "/sys/snmpd/hostip:",
+      "suggested_value": "",
+      "source": "httpd@0x004223fc"
+    },
+    {
+      "node_path": "/wlan/inf:%d/acl/mac:%d",
+      "suggested_value": "",
+      "source": "httpd@0x0041a3d0"
+    },
+    {
+      "node_path": "/sys/snmpd/v3status",
+      "suggested_value": "",
+      "source": "httpd@0x00417a48"
+    },
+    {
+      "node_path": "/captival/mtd/tar/size",
+      "suggested_value": "",
+      "source": "httpd@0x004186d4"
+    },
+    {
+      "node_path": "/wan/rg/inf:1/mode",
+      "suggested_value": "",
+      "source": "httpd@0x0040ea4c"
+    },
+    {
+      "node_path": "/runtime/snmp/debug",
+      "suggested_value": "",
+      "source": "httpd@0x004227e8"
+    },
+    {
+      "node_path": "/sys/snmpd/status",
+      "suggested_value": "",
+      "source": "httpd@0x00418364"
+    },
+    {
+      "node_path": "/runtime/web_session/mac",
+      "suggested_value": "",
+      "source": "httpd@0x0041e2e0"
+    },
+    {
+      "node_path": "/wlan/inf:1/autochannel",
+      "suggested_value": "",
+      "source": "httpd@0x004232bc"
+    },
+    {
+      "node_path": "/wlan/inf:1/channel_old",
+      "suggested_value": "",
+      "source": "httpd@0x00423368"
+    },
+    {
+      "node_path": "/runtime/stats/wlan/inf:1/client:1/mac",
+      "suggested_value": "",
+      "source": "httpd@0x004234c0"
+    },
+    {
+      "node_path": "/runtime/stats/wireless/up_times",
+      "suggested_value": "",
+      "source": "httpd@0x00423d40"
+    },
+    {
+      "node_path": "/sys/snmpd/seculevel:1",
+      "suggested_value": "",
+      "source": "httpd@0x00417d4c"
+    },
+    {
+      "node_path": "/sys/swcontroller/server_ip",
+      "suggested_value": "",
+      "source": "httpd@0x004174cc"
+    },
+    {
+      "node_path": "/sys/snmpd/authkey:1",
+      "suggested_value": "",
+      "source": "httpd@0x00418158"
+    },
+    {
+      "node_path": "/debug/trap",
+      "suggested_value": "",
+      "source": "httpd@0x0042355c"
+    },
+    {
+      "node_path": "/sys/snmpd/secumodel:",
+      "suggested_value": "",
+      "source": "httpd@0x0042248c"
+    },
+    {
+      "node_path": "/wlan/inf:1/apmonitor_last",
+      "suggested_value": "",
+      "source": "httpd@0x00422e60"
+    },
+    {
+      "node_path": "/wlan/inf:1/multi/index:%d/acl",
+      "suggested_value": "",
+      "source": "httpd@0x0041a1b8"
+    },
+    {
+      "node_path": "/sys/snmpd/mapgroup:1",
+      "suggested_value": "",
+      "source": "httpd@0x00418030"
+    },
+    {
+      "node_path": "/wlan/inf:1/aparray_cfg_version",
+      "suggested_value": "",
+      "source": "httpd@0x004192b0"
+    },
+    {
+      "node_path": "/sys/swcontroller/ftp_port",
+      "suggested_value": "",
+      "source": "httpd@0x00417874"
+    },
+    {
+      "node_path": "/runtime/sys/fw_size",
+      "suggested_value": "",
+      "source": "httpd@0x0041b680"
+    }
+  ]
+}

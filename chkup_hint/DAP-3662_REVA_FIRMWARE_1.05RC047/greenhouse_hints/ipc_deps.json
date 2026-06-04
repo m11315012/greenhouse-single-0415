@@ -1,0 +1,37 @@
+{
+  "firmware_id": "_DAP3662-firmware-v105-rc047.bin.extracted",
+  "companion_daemons": [
+    {
+      "binary_name": "xmldb",
+      "binary_path": "/usr/sbin/xmldb",
+      "launch_args": "",
+      "ipc_type": "unix_socket",
+      "socket_path": "/var/run/xmldb_sock",
+      "evidence": "connect(AF_UNIX, /var/run/xmldb_sock) in httpd@0x0042071c"
+    },
+    {
+      "binary_name": "mathopd",
+      "binary_path": "/usr/sbin/mathopd",
+      "launch_args": "",
+      "ipc_type": "unix_socket",
+      "socket_path": "/var/run/mathopd_usock",
+      "evidence": "connect(AF_UNIX, /var/run/mathopd_usock) in httpd@0x0040a6e8"
+    },
+    {
+      "binary_name": "fresetd",
+      "binary_path": "/usr/sbin/fresetd",
+      "launch_args": "",
+      "ipc_type": "unix_socket",
+      "socket_path": "/var/run/fresetd_unixsock",
+      "evidence": "connect(AF_UNIX, /var/run/fresetd_unixsock) in fresetd@0x00402c94"
+    },
+    {
+      "binary_name": "servd",
+      "binary_path": "/usr/sbin/servd",
+      "launch_args": "",
+      "ipc_type": "unix_socket",
+      "socket_path": "/var/run/servd_ctrl_usock",
+      "evidence": "connect(AF_UNIX, /var/run/servd_ctrl_usock) in servd@0x0041d014"
+    }
+  ]
+}

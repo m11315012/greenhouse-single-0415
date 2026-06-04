@@ -1,0 +1,10 @@
+{
+  "firmware_id": "_DIR513A_FW1.10.00KR.bin.extracted",
+  "web_binaries": [
+    {
+      "binary_path": "/bin/goahead",
+      "evidence": "binary name matches known HTTP server list: goahead",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+    "firmware_name": "_DIR513A_FW1.10.00KR.bin.extracted",
+    "source_binaries": [
+        "00400f08",
+        "00401b70"
+    ],
+    "fields": [
+        {
+            "func_name": "HMAC_Update",
+            "func_addr": "00401b70",
+            "category": "Authenticity",
+            "field_type": "signature",
+            "offset": 0,
+            "size": 129,
+            "mutable": false
+        },
+        {
+            "func_name": "MD5_Update",
+            "func_addr": "00400f08",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 104,
+            "size": 4,
+            "mutable": false
+        },
+        {
+            "func_name": "MD5_Update",
+            "func_addr": "00400f08",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 108,
+            "size": 4,
+            "mutable": false
+        },
+        {
+            "func_name": "MD5_Update",
+            "func_addr": "00400f08",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 112,
+            "size": 59,
+            "mutable": false
+        },
+        {
+            "func_name": "MD5_Update",
+            "func_addr": "00400f08",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 112,
+            "size": 129,
+            "mutable": false
+        }
+    ],
+    "flat": {
+        "signature_offset": 0,
+        "signature_size": 129,
+        "checksum_offset": 104,
+        "checksum_size": 4
+    }
+}

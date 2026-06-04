@@ -1,0 +1,197 @@
+{
+  "firmware_id": "_DIR513A_FW1.10.00KR.bin.extracted",
+  "patch_hints": [
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x004430ec",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x004016b0",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x0040170c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x0040182c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x00401868",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x004018a8",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x004430ec",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x004016b0",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x0040170c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x0040182c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x00401868",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload_bootloader.cgi",
+      "branch_addr": "0x004018a8",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x004440fc",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x00401ea4",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x00401f00",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x00402020",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x0040205c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "version_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x0040209c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x004440fc",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x00401ea4",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x00401f00",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x00402020",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x0040205c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    },
+    {
+      "hint_type": "model_check",
+      "binary": "/etc_ro/web/cgi-bin/upload.cgi",
+      "branch_addr": "0x0040209c",
+      "fail_target": "",
+      "pass_target": "",
+      "description": "findStrInFile call site"
+    }
+  ]
+}

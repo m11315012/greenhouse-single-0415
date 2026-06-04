@@ -1097,6 +1097,28 @@ class BinTrunk:
                     return node, old_node, s
         return None, None, None
 
+    def find_nodes_near_addr(self, addr, tolerance=0x100):
+        """回傳 CFG 中距離 addr 在 tolerance 範圍內的 node name 列表。"""
+        matches = []
+        for node in self.graph.nodes:
+            try:
+                node_addr = self.node_name_to_addr(node)
+                if isinstance(node_addr, int) and abs(node_addr - addr) <= tolerance:
+                    matches.append(node)
+            except Exception:
+                continue
+        return matches
+
+    def trim_trace_near_nodes(self, trace_path, target_nodes, window=200):
+        """回傳 trace_path 中第一個 target_node 出現位置的前後 window 大小片段。"""
+        target_set = set(target_nodes)
+        for i, node in enumerate(trace_path):
+            if node in target_set:
+                start = max(0, i - window)
+                end = min(len(trace_path), i + window)
+                return trace_path[start:end]
+        return trace_path
+
     def get_nodes_in_cycle(self, trace_path, MAX_LOOP_SIZE=30, skipList=[]):
         # we assume a cycle is when a node is encountered again
         # nodes_encountered = list()

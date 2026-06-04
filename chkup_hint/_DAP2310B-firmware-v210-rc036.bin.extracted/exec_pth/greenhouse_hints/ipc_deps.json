@@ -1,0 +1,39 @@
+{
+  "firmware_id": "_DAP2310B-firmware-v210-rc036.bin.extracted",
+  "xmldb_node_name": "wapn25_dkbs_dap2310b",
+  "companion_daemons": [
+    {
+      "binary_name": "xmldb",
+      "binary_path": "/usr/sbin/xmldb",
+      "launch_args": "",
+      "ipc_type": "unix_socket",
+      "socket_path": "/var/run/xmldb_sock",
+      "evidence": "connect(AF_UNIX, /var/run/xmldb_sock) in athstats@0x00406de8"
+    },
+    {
+      "binary_name": "servd",
+      "binary_path": "/usr/sbin/servd",
+      "launch_args": "",
+      "ipc_type": "unix_socket",
+      "socket_path": "/var/run/servd_ctrl_usock",
+      "evidence": "connect(AF_UNIX, /var/run/servd_ctrl_usock) in servd@0x0041d014"
+    },
+    {
+      "binary_name": "fresetd",
+      "binary_path": "/usr/sbin/fresetd",
+      "launch_args": "",
+      "ipc_type": "unix_socket",
+      "socket_path": "/var/run/fresetd_unixsock",
+      "evidence": "connect(AF_UNIX, /var/run/fresetd_unixsock) in fresetd@0x00402c94"
+    }
+  ],
+  "device_nodes": [
+    {
+      "path": "/dev/gpio",
+      "type": "char",
+      "major": 101,
+      "minor": 0,
+      "evidence": "config.sh: insmod gpio.ko && mknod /dev/gpio c 101 0; getsys(rgbin) calls ioctl on it"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+    "Proper": [
+        {
+            "Program": "/home/m11315012/workspace/Firmware-Dataset/fws/CVE_extracted/DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP_extracted/_DAP-2310_REVB_FIRMWARE_2.10.RC036.ZIP.extracted/_DAP2310B-firmware-v210-rc036.bin.extracted/squashfs-root/usr/sbin/rgbin",
+            "Function Address": "verify_update_3g_package",
+            "Function Name": "verify_update_3g_package",
+            "Verification Method": "Protected",
+            "Category": "Proper_Integrity"
+        }
+    ],
+    "Improper": [],
+    "Missing": [
+        {
+            "Program": null,
+            "Function Address": null,
+            "Function Name": null,
+            "Verification Method": null,
+            "Category": "Missing_Authenticity"
+        },
+        {
+            "Program": null,
+            "Function Address": null,
+            "Function Name": null,
+            "Verification Method": null,
+            "Category": "Missing_Freshness"
+        },
+        {
+            "Program": null,
+            "Function Address": null,
+            "Function Name": null,
+            "Verification Method": null,
+            "Category": "Missing_Compatibility"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "firmware_id": "_DAP3662-firmware-v105-rc047.bin.extracted",
+  "patch_hints": [
+    {
+      "hint_type": "wait_loop",
+      "binary": "/sbin/httpd",
+      "loop_head": "0x0042071c",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/xmldb_sock)",
+      "description": "polling for xmldb socket"
+    },
+    {
+      "hint_type": "wait_loop",
+      "binary": "/sbin/httpd",
+      "loop_head": "0x0040a6e8",
+      "loop_exit": "",
+      "condition": "unix_socket_connect(/var/run/mathopd_usock)",
+      "description": "polling for mathopd socket"
+    }
+  ]
+}

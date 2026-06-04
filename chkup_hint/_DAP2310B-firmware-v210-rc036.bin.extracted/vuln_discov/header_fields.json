@@ -1,0 +1,48 @@
+{
+    "firmware_name": "_DAP2310B-firmware-v210-rc036.bin.extracted",
+    "source_binaries": [
+        "00402f00"
+    ],
+    "fields": [
+        {
+            "func_name": "verify_update_3g_package",
+            "func_addr": "00402f00",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 104,
+            "size": 4,
+            "mutable": false
+        },
+        {
+            "func_name": "verify_update_3g_package",
+            "func_addr": "00402f00",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 108,
+            "size": 4,
+            "mutable": false
+        },
+        {
+            "func_name": "verify_update_3g_package",
+            "func_addr": "00402f00",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 112,
+            "size": 59,
+            "mutable": false
+        },
+        {
+            "func_name": "verify_update_3g_package",
+            "func_addr": "00402f00",
+            "category": "Integrity",
+            "field_type": "checksum",
+            "offset": 112,
+            "size": 129,
+            "mutable": false
+        }
+    ],
+    "flat": {
+        "checksum_offset": 104,
+        "checksum_size": 4
+    }
+}

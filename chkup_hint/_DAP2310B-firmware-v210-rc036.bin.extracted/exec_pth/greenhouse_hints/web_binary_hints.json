@@ -1,0 +1,10 @@
+{
+  "firmware_id": "_DAP2310B-firmware-v210-rc036.bin.extracted",
+  "web_binaries": [
+    {
+      "binary_path": "/sbin/httpd",
+      "evidence": "binary name matches known HTTP server list: httpd",
+      "confidence": "high"
+    }
+  ]
+}

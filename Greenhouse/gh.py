@@ -1,11 +1,10 @@
 from socket import has_ipv6
-from telnetlib import IP
 from backend import *
 from patcher import *
 from plugins import *
 from sidebins import *
 import argparse
-import os, stat
+import os, stat, sys
 import traceback
 import time
 import subprocess
@@ -552,6 +551,27 @@ class Greenhouse():
                     print("    - using ", name)
                     bg_cmds.extend(cmds)
                     bg_sleep += sleeptime
+
+            # prepend ChkUp-identified companion daemons so they start first
+            # 只有 FirmAE 沒有成功時才注入，避免干擾 FirmAE 已準備好的 cache 環境
+            if not self.rh_success:
+                chkup_cmds, chkup_sleep = self.gh.pre_analyzer.get_companion_daemon_cmds(bin_paths, self.fs_path)
+                if chkup_cmds:
+                    bg_cmds = chkup_cmds + bg_cmds
+                    bg_sleep += chkup_sleep
+                # FirmAE 失敗時補建 ChkUp 識別的裝置節點（如 /dev/gpio）
+                # QEMU hackdevproc 會把 /dev/ 重導向到 /ghdev/，所以兩個都要建
+                for dev in self.gh.pre_analyzer.get_device_nodes():
+                    rel = dev.get("path", "").lstrip("/")
+                    # /dev/gpio → 同時建 dev/gpio 和 ghdev/gpio
+                    for prefix in [rel, rel.replace("dev/", "ghdev/", 1)]:
+                        stub = os.path.join(self.fs_path, prefix)
+                        if stub and not os.path.exists(stub):
+                            os.makedirs(os.path.dirname(stub), exist_ok=True)
+                            open(stub, "w").close()
+                            print("[ChkUp] Created device stub: %s" % stub)
+            else:
+                print("[ChkUp] FirmAE succeeded, skipping companion daemon injection")
             print("...done!")
 
         while True:
@@ -860,7 +880,8 @@ class Greenhouse():
             ## perform appropriate patch
             if len(trace_trunk_path) <= 0 or \
                 not patcher.diagnose_and_patch(binary, self.bintrunk, trace, trace_trunk_path, index, exit_code, \
-                                              timedout, errored, is_daemonized, skip=self.diagnose_only, changelog=self.changelog):
+                                              timedout, errored, is_daemonized, skip=self.diagnose_only, changelog=self.changelog, \
+                                              patch_hints=self.gh.pre_analyzer.get_patch_hints()):
                 if needs_nodaemon_patch:
                     # revert
                     print("    - unable to patch daemon call, reverting...")
@@ -1012,6 +1033,7 @@ def main():
             ret = ff.run(args.img_path)
     else: # batch mode
         ff.batchrun(args.batchfolder)
+    sys.exit(ret)
 
     exit(ret)
 
