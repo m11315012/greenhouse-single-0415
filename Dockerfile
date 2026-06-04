@@ -104,6 +104,7 @@ RUN . /root/venv/bin/activate \
 		
 RUN . /root/venv/bin/activate \
 		 && pip install wheel \
+		 && pip install 'requests>=2.28.0' 'urllib3>=1.26.0,<2' \
 		  && pip install -r /gh/requirements.txt
 
 RUN . /root/venv/bin/activate \

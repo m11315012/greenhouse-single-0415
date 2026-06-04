@@ -1,12 +1,19 @@
 #!/bin/bash
-# Automated end-to-end Greenhouse firmware rehosting workflow.
-# Replaces the manual steps in doc/MANUAL.md.
+# Greenhouse firmware rehosting — original execution order.
+#
+# Greenhouse's designed flow:
+#   1. User-space emulation + patch loop (primary)
+#   2. FirmAE full-system rehost as fallback only if step 1 fails
+#
+# The default container image has -rh hardcoded in run.sh, which forces FirmAE
+# to run first every time. This script overrides that by copying the patched
+# host run.sh (which respects the REHOST_FIRST variable) into the container.
 #
 # Usage examples:
-#   ./auto_run.sh --brand dlink --firmware ./DIR-868L.zip
-#   ./auto_run.sh --brand dlink --firmware ./DIR-868L.zip --routersploit
-#   ./auto_run.sh --run-firmware ./results/<sha256>
-#   ./auto_run.sh --build          # rebuild Docker image first
+#   ./auto_run_no_firmae.sh --brand dlink --firmware ./DIR-868L.bin
+#   ./auto_run_no_firmae.sh --brand dlink --firmware ./DIR-868L.bin --routersploit
+#   ./auto_run_no_firmae.sh --run-firmware ./results/test/<sha256>
+#   ./auto_run_no_firmae.sh --build
 
 set -euo pipefail
 
@@ -18,7 +25,6 @@ DO_BUILD=false
 DO_REHOST=false
 DO_RUN_FIRMWARE=false
 DO_ROUTERSPLOIT=false
-DO_REHOST_FIRST=false
 RUN_FIRMWARE_PATH=""
 CHKUP_HINTS_SRC=""
 
@@ -32,27 +38,24 @@ usage() {
     cat <<EOF
 Usage: $0 [OPTIONS]
 
+Runs Greenhouse in its original order: user-space patch loop first,
+FirmAE full-system emulation only as a fallback if patching fails.
+
 Options:
   --brand BRAND           Firmware brand (required with --rehost)
   --firmware PATH         Firmware image path (required with --rehost)
-  --outdir DIR            Results output directory (default: ./results)
+  --outdir DIR            Results output directory (default: ./results/test)
   --build                 (Re)build the Docker image via Makefile before running
   --rehost                Rehost firmware (default when --firmware is given)
   --run-firmware PATH     Start a previously rehosted result with docker-compose
   --routersploit          Run routersploit after rehosting (implies --rehost)
-  --rehost-first          Pass -rh to Greenhouse: run FirmAE full-system rehost before patch loop
-  --chkup-hints DIR       Path to ChkUp greenhouse_hints/ directory (sets CHKUP_HINTS_DIR inside container)
+  --chkup-hints DIR       Path to ChkUp greenhouse_hints/ directory
   -h, --help              Show this help
 
 Examples:
-  # Rehost a firmware image:
-  $0 --brand dlink --firmware DIR-868L.zip
-
-  # Rehost then run routersploit:
-  $0 --brand dlink --firmware DIR-868L.zip --routersploit
-
-  # Start an already-rehosted image:
-  $0 --run-firmware ./results/<sha256>
+  $0 --brand dlink --firmware DIR-868L.bin
+  $0 --brand dlink --firmware DIR-868L.bin --routersploit
+  $0 --run-firmware ./results/test/<sha256>
 EOF
 }
 
@@ -68,17 +71,14 @@ while [[ $# -gt 0 ]]; do
         --build)        DO_BUILD=true;         shift ;;
         --rehost)       DO_REHOST=true;        shift ;;
         --run-firmware) DO_RUN_FIRMWARE=true; RUN_FIRMWARE_PATH="$2"; shift 2 ;;
-        --routersploit)  DO_ROUTERSPLOIT=true;  shift ;;
-        --rehost-first)  DO_REHOST_FIRST=true;  shift ;;
+        --routersploit) DO_ROUTERSPLOIT=true;  shift ;;
         --chkup-hints)  CHKUP_HINTS_SRC="$2";  shift 2 ;;
         -h|--help)      usage; exit 0 ;;
         *) die "Unknown option: $1" ;;
     esac
 done
 
-# --firmware implies --rehost
 [[ -n "$FIRMWARE" ]] && DO_REHOST=true
-# --routersploit implies --rehost
 $DO_ROUTERSPLOIT && DO_REHOST=true
 
 # ── step 0: build image ───────────────────────────────────────────────────────
@@ -95,7 +95,6 @@ if $DO_REHOST; then
     [[ -z "$FIRMWARE" ]] && die "--firmware is required for rehosting"
     [[ -f "$FIRMWARE" ]] || die "Firmware file not found: $FIRMWARE"
 
-    # Check image exists
     docker image inspect "$GREENHOUSE_IMAGE" &>/dev/null \
         || die "Docker image '$GREENHOUSE_IMAGE' not found. Run with --build first."
 
@@ -112,10 +111,11 @@ if $DO_REHOST; then
         SECCOMP_OPT=""
         if [[ -f "$SECCOMP_PROFILE" ]]; then
             SECCOMP_OPT="--security-opt seccomp=$SECCOMP_PROFILE"
-            log "Applying seccomp profile: $SECCOMP_PROFILE (blocks reboot syscall)"
+            log "Applying seccomp profile: $SECCOMP_PROFILE"
         else
-            log "WARNING: seccomp_no_reboot.json not found — host reboot protection disabled"
+            warn "seccomp_no_reboot.json not found — host reboot protection disabled"
         fi
+
         CONTAINER=$(docker run -d --privileged \
             $SECCOMP_OPT \
             -v /dev:/host/dev \
@@ -133,7 +133,13 @@ if $DO_REHOST; then
         log "Initializing container environment (dockerd, PostgreSQL, etc.)..."
         docker exec "$CONTAINER" /gh/docker_init.sh
 
+        # The image's run.sh hardcodes -rh (FirmAE first). Replace it with the
+        # host version that uses ${REHOST_FIRST}, which defaults to empty here.
+        log "Patching container run.sh (remove hardcoded -rh)..."
+        docker cp "$(dirname "$0")/run.sh" "$CONTAINER:/gh/run.sh"
+
         # Copy modified Python sources so ChkUp and other patches are active.
+        # The Docker image was built before these changes; we patch in-place.
         log "Syncing modified Greenhouse Python sources into container..."
         GH_SRC="$(cd "$(dirname "$0")" && pwd)/Greenhouse"
         docker cp "$GH_SRC/gh.py"                         "$CONTAINER:/gh/gh.py"
@@ -153,11 +159,8 @@ if $DO_REHOST; then
             docker cp "$CHKUP_HINTS_SRC/." "$CONTAINER:/gh/chkup_hints/"
         fi
 
-        log "Running Greenhouse — this can take up to 24 hours..."
-        # tee keeps output visible while also logging
-        REHOST_FIRST_FLAG=""
-        $DO_REHOST_FIRST && REHOST_FIRST_FLAG="-rh"
-        docker exec "$CONTAINER" /gh/run.sh "$BRAND" "firmware_input" "$REHOST_FIRST_FLAG" \
+        log "Running Greenhouse (user-space first) — this can take up to 24 hours..."
+        docker exec "$CONTAINER" /gh/run.sh "$BRAND" "firmware_input" \
             2>&1 | tee gh.log
 
         log "Copying results back to host..."
@@ -184,11 +187,10 @@ if $DO_REHOST; then
                 || warn "save_result.sh failed (non-fatal)"
         fi
 
-        trap - EXIT   # drop the auto-cleanup; let the user inspect logs
+        trap - EXIT
         cleanup
     fi
 
-    # Discover firmware name from result directory
     FIRMWARE_NAME=$(ls "$RESULT_PATH" 2>/dev/null | head -1)
     [[ -z "$FIRMWARE_NAME" ]] && die "No subdirectory found inside $RESULT_PATH"
     DEBUG_DIR="$RESULT_PATH/$FIRMWARE_NAME/debug"
@@ -202,10 +204,10 @@ if $DO_REHOST; then
     fi
 fi
 
-# ── steps 7-13: run rehosted firmware ────────────────────────────────────────
+# ── run rehosted firmware ────────────────────────────────────────────────────
 
 run_rehosted() {
-    local result_root="$1"   # path to <outdir>/<sha256>
+    local result_root="$1"
 
     local fw_name
     fw_name=$(ls "$result_root" | head -1)

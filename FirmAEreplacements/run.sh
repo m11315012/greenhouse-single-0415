@@ -216,12 +216,20 @@ function run_emulation()
             fi
 
             local QEMU_STILL_RUNNING="qemu"
+            local QEMU_WAIT=0
+            local QEMU_TIMEOUT=30
             while [[ $QEMU_STILL_RUNNING == *"qemu"* ]]; do
                 echo "    - waiting for qemu to shutdown..."
-                QEMU_STILL_RUNNING="$(ps -aux | grep qemu | grep -v grep | grep -v python | xargs echo "PS:")"
+                QEMU_STILL_RUNNING="$(ps -aux | grep qemu | grep -v grep | grep -v python | grep -v defunct | xargs echo "PS:")"
                 echo "    - QEMU_UP: " $QEMU_STILL_RUNNING
                 sync
                 sleep 10
+                QEMU_WAIT=$((QEMU_WAIT + 1))
+                if [[ $QEMU_WAIT -ge $QEMU_TIMEOUT ]]; then
+                    echo "    - QEMU wait timeout (${QEMU_TIMEOUT} retries), force killing..."
+                    pkill -9 -f "qemu-system" 2>/dev/null || true
+                    break
+                fi
             done
             if [[ $TRIES -lt 5 ]]; then
                 echo "[*] qemu shutdown complete, re-attempting run..."

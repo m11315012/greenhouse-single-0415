@@ -40,8 +40,15 @@ echo ${BRAND} ${IMG_PATH}
 echo "--------------------------------------------------------------------" 
 
 cd /gh
+# 自動偵測 ChkUp hints 目錄
+if [[ -z "${CHKUP_HINTS_DIR:-}" && -d "/gh/chkup_hints" ]]; then
+    export CHKUP_HINTS_DIR="/gh/chkup_hints"
+    echo "[ChkUp] Auto-detected hints dir: $CHKUP_HINTS_DIR"
+fi
+
 # HTTP
-timeout 86400 python3 /gh/gh.py --outpath /gh/results/${SHA256} --workspace /tmp/scratch --firmae /work/FirmAE --logpath=/patches/${SHA256}.log --cache_path=/cache --ip 172.21.0.2 --ports="80,81" --max_cycles=26 -rh --brand=${BRAND} --rehost_type="HTTP" --img_path=/${IMG_PATH} | tee -a /tmp/gh.log
+mkdir -p /gh/scratch
+timeout 86400 python3 /gh/gh.py --outpath /gh/results/${SHA256} --workspace /gh/scratch --firmae /work/FirmAE --logpath=/patches/${SHA256}.log --cache_path=/cache --ip 172.21.0.2 --ports="80,81" --max_cycles=26 ${REHOST_FIRST} --brand=${BRAND} --rehost_type="HTTP" --img_path=/${IMG_PATH} | tee -a /tmp/gh.log
 RET_CODE=`echo $?`
 
 echo "--------------------------------------------------------------------" 
