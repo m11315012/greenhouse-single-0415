@@ -34,9 +34,11 @@ class WaitLoop:
                         continue
                     hint_nodes = bintrunk.find_nodes_near_addr(hint_addr)
                     if hint_nodes:
+                        hint_node_set = set(hint_nodes)
                         trimmed = bintrunk.trim_trace_near_nodes(trace_trunk_path, hint_nodes, window=200)
                         cycle_nodes = bintrunk.get_nodes_in_cycle(trace_path=trimmed[::-1])
-                        if len(cycle_nodes) > 0:
+                        # 驗證找到的 cycle 確實包含 hint 附近的節點（排除 syscall stub 的偽 cycle）
+                        if len(cycle_nodes) > 0 and any(n in hint_node_set for n in cycle_nodes):
                             print("[ChkUp] WaitLoop found via hint @ %s" % addr_str)
                             self.cycle_nodes = cycle_nodes
                             self.parent, self.old_node, self.alt_node = bintrunk.find_cycle_exit(self.cycle_nodes)

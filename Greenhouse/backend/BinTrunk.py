@@ -1110,13 +1110,17 @@ class BinTrunk:
         return matches
 
     def trim_trace_near_nodes(self, trace_path, target_nodes, window=200):
-        """回傳 trace_path 中第一個 target_node 出現位置的前後 window 大小片段。"""
+        """回傳 trace_path 中最後一個 target_node 出現位置的前後 window 大小片段。
+        用最後出現位置：timeout 時 binary 正在該 loop 附近，最後出現最能代表 spin 狀態。"""
         target_set = set(target_nodes)
+        last_idx = -1
         for i, node in enumerate(trace_path):
             if node in target_set:
-                start = max(0, i - window)
-                end = min(len(trace_path), i + window)
-                return trace_path[start:end]
+                last_idx = i
+        if last_idx >= 0:
+            start = max(0, last_idx - window)
+            end = min(len(trace_path), last_idx + window)
+            return trace_path[start:end]
         return trace_path
 
     def get_nodes_in_cycle(self, trace_path, MAX_LOOP_SIZE=30, skipList=[]):
