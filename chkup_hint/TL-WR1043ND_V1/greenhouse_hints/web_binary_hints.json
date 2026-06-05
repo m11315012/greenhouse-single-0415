@@ -1,0 +1,9 @@
+{
+  "firmware_id": "TL-WR1043ND_V1_140319",
+  "web_binaries": [
+    {
+      "binary_path": "/usr/bin/httpd",
+      "confidence": "high"
+    }
+  ]
+}

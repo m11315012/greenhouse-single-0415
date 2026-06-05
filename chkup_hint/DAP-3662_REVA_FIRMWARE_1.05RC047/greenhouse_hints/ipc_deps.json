@@ -1,10 +1,11 @@
 {
   "firmware_id": "_DAP3662-firmware-v105-rc047.bin.extracted",
+  "xmldb_node_name": "wapac11_dkbs_dap3662",
   "companion_daemons": [
     {
       "binary_name": "xmldb",
       "binary_path": "/usr/sbin/xmldb",
-      "launch_args": "",
+      "launch_args": "-n wapac11_dkbs_dap3662 -t",
       "ipc_type": "unix_socket",
       "socket_path": "/var/run/xmldb_sock",
       "evidence": "connect(AF_UNIX, /var/run/xmldb_sock) in httpd@0x0042071c"

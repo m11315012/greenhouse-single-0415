@@ -1,0 +1,13 @@
+{
+  "firmware_id": "TL-WR1043ND_V1_140319",
+  "patch_hints": [
+    {
+      "hint_type": "wait_loop",
+      "binary": "/usr/bin/httpd",
+      "loop_head": "0x004b73d4",
+      "loop_exit": "0x004b741c",
+      "condition": "unknown_ipc_poll",
+      "description": "polling loop in httpd (derived from Greenhouse trace at 0x4b7414: bnez $s0, 0x4b73d4)"
+    }
+  ]
+}
