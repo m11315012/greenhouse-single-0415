@@ -59,6 +59,7 @@ class QemuRunner:
         self.nd_args = ""
         self.bg_cmds = []
         self.bg_sleep = 0
+        self.pre_cmds = []  # commands to run sequentially before main binary in qemu_run.sh
         self.qemu_command = ""
         self.emulation_output = ""
         self.client = None
@@ -563,6 +564,9 @@ class QemuRunner:
         with open(command_script_path, "w") as cs:
             cs.write("cd %s\n" % bin_cwd)
             cs.write("\n")
+            for pre_cmd in self.pre_cmds:
+                cs.write(pre_cmd)
+                cs.write("\n")
             cs.write(cwd_command)
             cs.write("\n")
         cs.close()

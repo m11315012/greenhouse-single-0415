@@ -162,6 +162,8 @@ log "Patching FirmAE run.sh (zombie QEMU fix)..."
 docker cp ./FirmAEreplacements/run.sh "$CONTAINER:/work/FirmAE/run.sh"
 docker cp ./Greenhouse/backend/Planter.py "$CONTAINER:/gh/backend/Planter.py"
 docker cp ./Greenhouse/backend/chkup_pre_analyzer.py "$CONTAINER:/gh/backend/chkup_pre_analyzer.py"
+docker cp ./Greenhouse/backend/QemuRunner.py "$CONTAINER:/gh/backend/QemuRunner.py"
+docker cp ./Greenhouse/gh.py "$CONTAINER:/gh/gh.py"
 
 # ── copy firmware into container ──────────────────────────────────────────────
 

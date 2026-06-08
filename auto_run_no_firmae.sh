@@ -146,6 +146,7 @@ if $DO_REHOST; then
         docker cp "$GH_SRC/backend/Planter.py"            "$CONTAINER:/gh/backend/Planter.py"
         docker cp "$GH_SRC/backend/BinTrunk.py"           "$CONTAINER:/gh/backend/BinTrunk.py"
         docker cp "$GH_SRC/backend/chkup_pre_analyzer.py" "$CONTAINER:/gh/backend/chkup_pre_analyzer.py"
+        docker cp "$GH_SRC/backend/QemuRunner.py"         "$CONTAINER:/gh/backend/QemuRunner.py"
         docker cp "$GH_SRC/patcher/Patcher.py"            "$CONTAINER:/gh/patcher/Patcher.py"
         docker cp "$GH_SRC/patcher/wait_loop.py"          "$CONTAINER:/gh/patcher/wait_loop.py"
         docker cp "$GH_SRC/patcher/premature_exit.py"     "$CONTAINER:/gh/patcher/premature_exit.py"

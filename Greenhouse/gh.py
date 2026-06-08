@@ -494,7 +494,29 @@ class Greenhouse():
                                  hackbind=self.hackbind,
                                  hackdevproc=self.hackdevproc,
                                  hacksysinfo=self.hacksysinfo)
-        
+
+        # detect ACTi-based D-Link camera firmware (DCS-6517/7517 and similar):
+        # these use /bin/nvram with Properties.IPv6.IPv6 key; without nvram init
+        # the IPv6 code path in httpd closes every connection in QEMU user-space.
+        _nvram_bin = os.path.join(self.fs_path, "bin", "nvram")
+        _httpd_bin = self.bin_path  # already a full absolute path (includes fs_path prefix)
+        _is_acti_camera = False
+        if os.path.exists(_nvram_bin):
+            try:
+                with open(_httpd_bin, "rb") as _f:
+                    _httpd_bytes = _f.read()
+                if b"Properties.IPv6.IPv6" in _httpd_bytes:
+                    _is_acti_camera = True
+            except Exception:
+                pass
+        if _is_acti_camera:
+            print("[Greenhouse] Detected ACTi-based camera firmware — injecting nvram harddefault + IPv6 disable")
+            self.runner.pre_cmds = [
+                "/bin/nvram harddefault",
+                "/bin/nvram set Properties.IPv6.IPv6 no",
+                "/bin/nvram commit",
+            ]
+
         # setup ip targets
         if not os.path.exists(self.ip_targets_path):
             self.gh.parse_ips(self.ip_targets_path, self.urls)
