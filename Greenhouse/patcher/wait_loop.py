@@ -1,4 +1,13 @@
 from .patches import *
+import time
+import json
+import os
+
+_TIMING_LOG = "/tmp/fuverify_patch_timing.jsonl"
+
+def _log_timing(record: dict):
+    with open(_TIMING_LOG, "a") as f:
+        f.write(json.dumps(record) + "\n")
 
 class WaitLoop:
     def __init__(self):
@@ -22,8 +31,14 @@ class WaitLoop:
         self.old_node = None
         self.alt_node = None
         if timedout:
+            trace_len = len(trace_trunk_path)
+            hint_time = 0.0
+            fullscan_time = 0.0
+            hint_matched = False
+
             # 若有 ChkUp 靜態 hint，先嘗試 hint 地址附近的區域，避免 O(N²) 全掃
             if loop_hints:
+                t0 = time.perf_counter()
                 for hint in loop_hints:
                     addr_str = hint.get("loop_head", "")
                     if not addr_str:
@@ -37,57 +52,66 @@ class WaitLoop:
                         hint_node_set = set(hint_nodes)
                         trimmed = bintrunk.trim_trace_near_nodes(trace_trunk_path, hint_nodes, window=200)
                         cycle_nodes = bintrunk.get_nodes_in_cycle(trace_path=trimmed[::-1])
-                        # 驗證找到的 cycle 確實包含 hint 附近的節點（排除 syscall stub 的偽 cycle）
                         if len(cycle_nodes) > 0 and any(n in hint_node_set for n in cycle_nodes):
                             print("[ChkUp] WaitLoop found via hint @ %s" % addr_str)
                             self.cycle_nodes = cycle_nodes
                             self.parent, self.old_node, self.alt_node = bintrunk.find_cycle_exit(self.cycle_nodes)
                             if self.parent and self.old_node and self.alt_node:
+                                hint_time = time.perf_counter() - t0
+                                hint_matched = True
                                 print("Divergence Node: %s->%s should become %s->%s" % (
                                     self.parent, self.old_node, self.parent, self.alt_node))
+                                _log_timing({
+                                    "patcher": "WaitLoop",
+                                    "iteration": index,
+                                    "trace_len": trace_len,
+                                    "hints_provided": True,
+                                    "hint_matched": True,
+                                    "hint_time_s": round(hint_time, 4),
+                                    "fullscan_time_s": 0.0,
+                                    "total_time_s": round(hint_time, 4),
+                                })
                                 return True
-                # hint 未命中，fallback 到原本邏輯
+                hint_time = time.perf_counter() - t0
                 print("[ChkUp] WaitLoop hints did not match, falling back to full trace scan")
 
-            # assuming we looped at least once
-            # all addresses in the loop will be present in the trace
-            # avoiding any one of them avoids the entire code block that is the loop
-
-            # try checking on two levels - immediate layer and caller layer
-            # we do not consider any loops of a higher order
-            # we always prioritize patching the inner loop first
+            t1 = time.perf_counter()
             cycle_nodes = bintrunk.get_nodes_in_cycle(trace_path=trace_trunk_path[::-1])
-            if len(cycle_nodes) <= 0: # try looking at parents
+            if len(cycle_nodes) <= 0:
                 last_addr_node = trace_trunk_path[-1]
                 caller_node = bintrunk.get_parent_calling_node(last_addr_node, trace_trunk_path)
-                
                 return_node = bintrunk.get_parent_return_node(last_addr_node, caller_node, trace_trunk_path)
-                
-                # get nodes between return addr and parent
                 caller_indexes = [i for i, x in enumerate(trace_trunk_path) if x == caller_node]
                 return_indexes = [i for i, x in enumerate(trace_trunk_path) if x == return_node]
                 return_index, caller_index = self.get_slice_index_for_caller_ret_nodes(caller_indexes, return_indexes)
-
                 skip_nodes = []
                 if return_index >= 0 and caller_index >= 0:
                     skip_nodes = trace_trunk_path[caller_index+1:return_index]
-
                 if len(skip_nodes) > 0:
                     cycle_nodes = bintrunk.get_nodes_in_cycle(trace_path=trace_trunk_path[::-1], skipList=skip_nodes)
 
-            # second pass
             if len(cycle_nodes) > 0:
                 print("Patching a wait loop...")
                 self.cycle_nodes = cycle_nodes
-
                 print("Cycle Nodes:")
                 print("    --> ", self.cycle_nodes)
-                self.parent, self.old_node, self.alt_node = bintrunk.find_cycle_exit(self.cycle_nodes) # alt_node = exit_node
+                self.parent, self.old_node, self.alt_node = bintrunk.find_cycle_exit(self.cycle_nodes)
 
                 if self.parent == None or self.old_node == None or self.alt_node == None:
                     print("Unable to find divergence to avoid exits/loops, exiting...")
                     print("   --> ", self.parent, self.old_node, self.alt_node)
                 else:
+                    fullscan_time = time.perf_counter() - t1
+                    _log_timing({
+                        "patcher": "WaitLoop",
+                        "iteration": index,
+                        "trace_len": trace_len,
+                        "hints_provided": loop_hints is not None and len(loop_hints) > 0,
+                        "hint_matched": False,
+                        "hint_time_s": round(hint_time, 4),
+                        "fullscan_time_s": round(fullscan_time, 4),
+                        "total_time_s": round(hint_time + fullscan_time, 4),
+                    })
                     print("Divergence Node: %s->%s should become %s->%s" % (self.parent, self.old_node, self.parent, self.alt_node))
                     return True
 

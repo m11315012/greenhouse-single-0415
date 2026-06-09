@@ -1,4 +1,13 @@
 from .patches import *
+import time
+import json
+import os
+
+_TIMING_LOG = "/tmp/fuverify_patch_timing.jsonl"
+
+def _log_timing(record: dict):
+    with open(_TIMING_LOG, "a") as f:
+        f.write(json.dumps(record) + "\n")
 
 class PrematureExit:    
     def __init__(self):
@@ -20,11 +29,77 @@ class PrematureExit:
         if timedout == False and exit_code != None:
             parent_addr_trace_seq = trace.read_trace(trace.traces[trace.parent_pid])
             parent_addr_trace_seq = bintrunk.unroll_trace(parent_addr_trace_seq)
-            for tag in self.exit_tags:
-                exit_addr = bintrunk.addr_trace_find_func_callsites(parent_addr_trace_seq, tag)
-                if exit_addr >= 0:
-                    print("    - found addr %x for tag %s" % (exit_addr, tag))
-                    break
+            trace_len = len(parent_addr_trace_seq)
+            hint_time = 0.0
+            fullscan_time = 0.0
+
+            # Hint-guided fast path: search a trimmed trace window near each hint
+            # address before falling back to the full O(N) scan.
+            if exit_hints:
+                t0 = time.perf_counter()
+                for hint in exit_hints:
+                    addr_str = hint.get("branch_addr", "")
+                    if not addr_str:
+                        continue
+                    try:
+                        hint_addr = int(addr_str, 16)
+                    except ValueError:
+                        continue
+                    hint_nodes = bintrunk.find_nodes_near_addr(hint_addr)
+                    if not hint_nodes:
+                        continue
+                    trimmed = bintrunk.trim_trace_near_nodes(
+                        trace_trunk_path, hint_nodes, window=150
+                    )
+                    if not trimmed:
+                        continue
+                    trimmed_addr_seq = bintrunk.unroll_trace(trimmed)
+                    for tag in self.exit_tags:
+                        exit_addr = bintrunk.addr_trace_find_func_callsites(
+                            trimmed_addr_seq, tag
+                        )
+                        if exit_addr >= 0:
+                            print("[ChkUp] PrematureExit found via hint @ %s (tag: %s)"
+                                  % (addr_str, tag))
+                            break
+                    if exit_addr >= 0:
+                        break
+                hint_time = time.perf_counter() - t0
+                if exit_addr < 0:
+                    print("[ChkUp] PrematureExit hints did not match, "
+                          "falling back to full trace scan")
+
+            if exit_addr < 0:
+                t1 = time.perf_counter()
+                for tag in self.exit_tags:
+                    exit_addr = bintrunk.addr_trace_find_func_callsites(
+                        parent_addr_trace_seq, tag
+                    )
+                    if exit_addr >= 0:
+                        print("    - found addr %x for tag %s" % (exit_addr, tag))
+                        break
+                fullscan_time = time.perf_counter() - t1
+                _log_timing({
+                    "patcher": "PrematureExit",
+                    "iteration": index,
+                    "trace_len": trace_len,
+                    "hints_provided": exit_hints is not None and len(exit_hints) > 0,
+                    "hint_matched": False,
+                    "hint_time_s": round(hint_time, 4),
+                    "fullscan_time_s": round(fullscan_time, 4),
+                    "total_time_s": round(hint_time + fullscan_time, 4),
+                })
+            else:
+                _log_timing({
+                    "patcher": "PrematureExit",
+                    "iteration": index,
+                    "trace_len": trace_len,
+                    "hints_provided": exit_hints is not None and len(exit_hints) > 0,
+                    "hint_matched": True,
+                    "hint_time_s": round(hint_time, 4),
+                    "fullscan_time_s": 0.0,
+                    "total_time_s": round(hint_time, 4),
+                })
 
             if exit_addr < 0:
                 # check if last touched address is an exit

@@ -47,7 +47,9 @@ class Patcher:
                 print("    - [%s] %s @ %s" % (h.get("hint_type", "?"), h.get("description", ""), addr))
                 if h.get("hint_type") == "wait_loop":
                     wait_loop_hints.append(h)
-                elif h.get("hint_type") in ("version_check", "model_check", "signature_check"):
+                elif h.get("hint_type") in (
+                        "exit_branch",                              # direct reboot call site
+                        "version_check", "model_check", "signature_check"):  # verify failure → exit
                     exit_hints.append(h)
 
         print("Patch Priority: ", [str(p)+":"+str(p.priority) for p in self.pObstacles])
